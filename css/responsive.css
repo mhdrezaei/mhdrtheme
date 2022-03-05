@@ -1,0 +1,812 @@
+@media screen and (max-width: 576px) {
+    .show-category{
+        display: none;
+    }
+    .slider .slid svg{
+        height: 300px;
+    }
+    .slick-dots li button{
+        width: 35px;
+        height:35px;
+    }
+    .slick-dots li.slick-active button:before{
+        width: 28px;
+        height: 28px;
+        top: 1px;
+        left: 1px;
+    }
+  		.slider .slid .slick-list {
+		padding-bottom : 15px;
+  }
+    .slider .slider-controls{
+        width: 100%;
+        left: 0;
+      	display : none;
+    }
+    .slider .slider-controls a{
+        color: #eaeaea;
+     	font-size:35px;
+    }
+    .slider-controls .slicks-prev{
+        margin-left:10%;
+    }
+    .slider-controls .slicks-next{
+        margin-right:10%;
+    }
+    .end-header svg path{
+        fill: #0c659f;
+    }
+  .introduce {
+    padding-bottom: 25px;
+}
+    .introduce-img{
+        overflow: hidden;
+    }
+    .introduce-img svg{
+        transform: scale(1.3);
+    }
+    .introduce-img svg path{
+        transform: translate(100px,115px);
+    }
+    .introduce .introduce-text .who-am-i {
+        position: absolute;
+        top: 40px;
+        left: 67px;
+        font-size: 40px;
+        display: inline-block;
+        color: #095891;
+    }
+    .introduce .introduce-text p {
+        position: absolute;
+    	top: 98px;
+    	left: 0;
+    	padding: 0 20px;
+    	display: inline-block;
+    	font-size: 24px;
+    	text-align: center;
+    	line-height: 40px;
+    	color: #095891;
+    }
+    .services .service .service-list .foot-section svg path{
+        fill: #012b63 !important;
+    }
+    .services .service .service-list .service-sec:nth-child(2){
+        top: 0;
+    }
+    .services .service .service-list .service-sec {
+        margin-bottom: 20px;
+    }
+    .services .service .service-list .service-sec:hover{
+        transform: translateY(10px);
+    }
+    .services .service .service-list .service-sec .service-name{
+        height: auto;
+    }
+    .services .service .service-list .service-sec .service-name .service-icon {
+        transform: scale(0.9);
+    }
+    .services .service .service-list .service-sec .service-name h3{
+        font-size: 28px;
+    }
+    .services .service .service-list .service-sec .service-name p{
+        font-size:16px;
+        line-height:25px;
+    }
+
+
+    .resome .resome-content{
+        top : -1px;
+    }
+    .resome-section .head-resome-section svg{
+        top: 2px;
+    }
+    .resome-content-left{
+        padding: 5px;
+    }
+    .resome .resome-content .container .resome-content-right {
+        padding:0;
+    }
+    .resome .resome-content .container .resome-content-right .title-resome h3 {
+        font-size: 34px;
+        color: #00ffe7;
+        padding: 30px 0 15px;
+        text-align: center;
+    }
+    .resome .resome-content .container .resome-content-right .resome-text p {
+        padding: 0 5px;
+        font-size: 18px;
+        line-height: 35px;
+        color: #ffffff;
+        text-align: left;
+        word-break: break-all;
+    }
+    .resome-section .resome select{
+        width: 92%;
+        font-family: 'mhdr';
+        font-size: 18px;
+        display: inline-block;
+        margin: 4px 0 4px 20px;
+    }
+    .resome-tabs{
+        display: none;
+    }
+    .blog-posts .blog-slider-posts .title-section h3 {
+        font-size: 45px;
+        margin-top: 30px;
+        padding: 0 0 5px 0;
+    }
+    .blog-posts{
+        display: none;
+    }
+    .footer-section .footer {
+        background-image: url(../images/bg-img.jpg);
+        background-position: 0 0;
+    }
+    .footer-section .footer .about{
+        margin:0;
+    }
+    .footer-section .footer .about .about-text .about-logo h3 {
+        font-size:24px;
+    }
+    .footer-section .footer .about .about-text .text-about p{
+        font-size:15px;
+    }
+    .social-icons{
+        line-height: 50px;
+    }
+    .social-icons a{
+        font-size:18px;
+    }
+    .footer-section .footer .footer-menu {
+        margin-top: 20px;
+    }
+    .footer-section .footer .footer-menu h4 {
+        font-size: 20px;
+        color: #00ffe7;
+        padding: 0 0 14px;
+        margin: 0 0 14px;
+    }
+    .footer .container .footer_2{
+        padding:8px;
+        text-align: center;
+        font-size:14px;
+    }
+    .elms_right {
+        text-align: center;
+        padding: 15px;
+        font-size: 13px;
+    }
+/*================== Blog Page ==============*/
+    .head-page {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .head-page .title-page h1{
+        font-size:40px;
+    }
+    .head-page .breadcrumbs{
+        font-size:16px;
+    }
+    .main-content {
+        margin-top: 40px;
+    }
+    .main-side{
+        padding: 0;
+    }
+    .post-blog {
+        padding: 0;
+    }
+    .post-blog .thumbnail-post {
+        margin: 0 0 20px 0;
+        border-radius: 6px 6px 0 0;
+    }
+    .post-blog .post-info {
+        padding: 0px 0 20px 0;
+    }
+    .post-blog .post-info .title-post h2 {
+        font-size: 22px;
+        padding: 15px;
+    }
+    .post-blog .post-info .metadata-post{
+        padding:10px 15px;
+    }
+    .post-blog .post-info .excerpt-post p {
+        font-size: 16px;
+        text-align: justify;
+        padding: 0 15px;
+    }
+    .post-blog .post-info .see-more {
+        margin: 30px 0;
+        position: relative;
+        text-align: center;
+    }
+    .sidebar-section{
+        padding: 0;
+    }
+    /*======================= Single Page ================*/
+    .main-content-single-page{
+        padding: 0;
+    }
+    .main-content-single-post{
+        padding: 0;
+    }
+    .single-post{
+        padding: 0;
+    }
+    .top-single-author{
+        display: none;
+    }
+
+    .author-info {
+        margin: 25px auto;
+        direction: ltr;
+        background-color: #f4f4f4;
+        border-radius: 5px;
+        height: 10%;
+        box-shadow: 0px 2px 8px 1px #00000038;
+    }
+
+    .author-info .author-img {
+        border-radius: 50%;
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+        border: none;
+        background: transparent;
+        box-shadow: none;
+        float: none;
+
+    }
+
+    .author-info .author-img img {
+        border-radius: 50%;
+        margin: 15px;
+        border: 1px solid #FFF;
+        box-shadow: 0px 3px 12px 3px #f8f8f8;
+    }
+
+    .author-info .author-name {
+        width: 100%;
+        direction: ltr;
+        text-align: center;
+        padding: 5px;
+        font-family: cursive;
+    }
+
+    .author-info .author-description {
+        direction: ltr;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .author-info .author-description p {
+        direction: ltr;
+        text-align: center;
+        font-family: cursive;
+        padding: 0 8px;
+        color: #dfdfdf;
+    }
+
+    .author-info .author-personal {
+        float: right;
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    .author-info .other-post {
+        text-align: center;
+        margin-top: 15px;
+    }
+    .author-info .other-post p{
+        text-align: center;
+    }
+
+    .author-info .other-post a {
+        font-family: cursive;
+        font-size:14px;
+        background-color: #fff;
+        padding: 7px 10px;
+        margin-right: 15px;
+        border-radius: 7px;
+        box-shadow: 0 2px 5px;
+        transition: all 0.3s;
+    }
+    .related-posts .related-post{
+        margin-bottom:30px;
+    }
+    .related-posts .related-post .rel-post{
+        text-align: center;
+    }
+    /*==================== Single Portfolio=================*/
+    .single-portfilio{
+        padding: 0;
+    }
+    .portfolio-description{
+        padding: 0;
+        margin-bottom: 30px;
+    }
+    .portfolio-images{
+        padding: 0;
+    }
+    /*========================= Contact Page ============*/
+    .main-contact .main-contact-page .info-contact p{
+        font-size:18px;
+    }
+    .main-contact .main-contact-page .info-contact p span{
+        font-size:16px;
+    }
+    .map-contact iframe{
+        width: 100%;
+    }
+
+    #rc-anchor-container, .g-recaptcha , #recaptchafield1 , #recaptchafield2 ,#recaptchafield3 ,#recaptchafield4{
+        transform:scale(0.81) !important;
+        -webkit-transform:scale(0.81);
+        transform-origin:0 0;
+        -webkit-transform-origin:0 0;
+    }
+
+
+
+
+
+
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .show-category{
+        display: none;
+    }
+    svg.first-svg , svg.first-svg01{
+      width : 100% !important;
+  
+  }
+
+    .slick-dots li button{
+        width: 14px;
+        height:14px;
+    }
+    .slick-dots li.slick-active button:before{
+        width: 8px;
+        height: 8px;
+        top: 1px;
+        left: 1px;
+    }
+  
+  	.slider .slid .slick-list {
+		padding-bottom : 30px;
+  }
+    .slider .slider-controls{
+        width: 100%;
+        left: 0;
+      	top: 88%;
+    }
+    .slider .slider-controls a{
+        color: #eaeaea;
+    }
+    .slider-controls .slicks-prev{
+        margin-left:10%;
+    }
+    .slider-controls .slicks-next{
+        margin-right:10%;
+    }
+  
+  .introduce .introduce-text .who-am-i{
+  	top: 50px;
+    left: 150px;
+  }
+  .introduce .introduce-text p{
+  	top : 150px;
+    font-size: 37px;
+  }
+
+
+    .services .service .service-list .foot-section svg path{
+        fill: #012b63 !important;
+    }
+    .services .service .service-list .service-sec:nth-child(2){
+        top: 0;
+    }
+    .services .service .service-list .service-sec {
+        margin-bottom: 20px;
+    }
+    .services .service .service-list .service-sec:hover{
+        transform: translateY(10px);
+    }
+    .services .service .service-list .service-sec .service-name{
+        height: auto;
+        border-radius: 100px;
+    }
+    .services .service .service-list .service-sec .service-name .service-icon {
+        transform: scale(0.9);
+    }
+    .services .service .service-list .service-sec .service-name h3{
+        font-size: 28px;
+    }
+    .services .service .service-list .service-sec .service-name p{
+        font-size:16px;
+        line-height:25px;
+    }
+
+    .blog-posts{
+        display: none;
+    }
+
+
+    .resome .resome-content{
+        top : -1px;
+    }
+    .resome-section .head-resome-section svg{
+        top: 2px;
+    }
+    .resome-content-left{
+        padding: 5px;
+    }
+    .resome-content .container .resome-content-left img.img-responsive{
+        margin: 0 auto;
+    }
+    .resome .resome-content .container .resome-content-right {
+        padding:0;
+    }
+    .resome .resome-content .container .resome-content-right .title-resome h3 {
+        font-size: 34px;
+        color: #00ffe7;
+        padding: 30px 0 15px;
+        text-align: center;
+    }
+    .resome .resome-content .container .resome-content-right .resome-text p {
+        padding: 0 5px;
+        font-size: 18px;
+        line-height: 35px;
+        color: #ffffff;
+        text-align: left;
+        word-break: break-all;
+    }
+    .resome-section .resome select{
+        width: 92%;
+        font-family: 'mhdr';
+        font-size: 18px;
+        display: inline-block;
+        margin: 4px 4px 4px 8px;
+    }
+    .resome-tabs{
+        display: none;
+    }
+
+
+    .footer-section .footer {
+        background-image: url(../images/bg-img.jpg);
+        background-position: 0 -1%;
+    }
+    .footer-section .footer .about{
+        margin:0;
+    }
+    .footer-section .footer .about .about-text .about-logo h3 {
+        font-size:24px;
+    }
+    .footer-section .footer .about .about-text .text-about p{
+        font-size:15px;
+    }
+    .social-icons{
+        line-height: 50px;
+    }
+    .social-icons a{
+        font-size:18px;
+    }
+    .footer-section .footer .footer-menu {
+        margin-top: 20px;
+    }
+    .footer-section .footer .footer-menu h4 {
+        font-size: 20px;
+        color: #00ffe7;
+        padding: 0 0 14px;
+        margin: 0 0 14px;
+    }
+    .footer .container .footer_2{
+        padding:8px;
+        text-align: center;
+        font-size:14px;
+    }
+    .elms_right {
+        text-align: center;
+        padding: 15px;
+        font-size: 13px;
+    }
+
+
+}
+
+@media (min-width: 768px){
+    .navbar-right .dropdown-menu {
+        right: auto;
+        left: 0;
+    }
+    }
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+    .show-category{
+        display: none;
+    }
+    .slick-track svg{
+        transform: scale(0.7);
+    }
+    .slick-dots li button{
+        width: 14px;
+        height:14px;
+    }
+    .slick-dots li.slick-active button:before{
+        width: 8px;
+        height: 8px;
+        top: 1px;
+        left: 1px;
+    }
+    .slider .slider-controls{
+        width: 100%;
+        left: 0;
+    }
+    .slider .slider-controls a{
+        color: #eaeaea;
+    }
+    .slider-controls .slicks-prev{
+        margin-left:10%;
+    }
+    .slider-controls .slicks-next{
+        margin-right:10%;
+    }
+
+
+    .introduce-img{
+        overflow: hidden;
+    }
+
+    .introduce-img svg path{
+        transform: translate(115px,115px);
+    }
+    .introduce .introduce-text .who-am-i {
+        position: absolute;
+        top: 200px;
+        left: 230px;
+        font-size: 55px;
+        display: inline-block;
+        color: #095891;
+    }
+    .introduce .introduce-text p {
+        position: absolute;
+        top: 270px;
+        left: 0;
+        padding: 10px 70px;
+        display: inline-block;
+        font-size: 30px;
+        text-align: center;
+        line-height: 50px;
+        color: #095891;
+    }
+
+
+
+    .services .service .service-list .foot-section svg path{
+        fill: #012b63 !important;
+    }
+    .services .service .service-list .service-sec:nth-child(2){
+        top: 0;
+    }
+    .services .service .service-list .service-sec {
+        margin-bottom: 20px;
+    }
+    .services .service .service-list .service-sec:hover{
+        transform: translateY(10px);
+    }
+    .services .service .service-list .service-sec .service-name{
+        height: auto;
+        border-radius: 100px;
+    }
+    .services .service .service-list .service-sec .service-name .service-icon {
+        transform: scale(0.9);
+    }
+    .services .service .service-list .service-sec .service-name h3{
+        font-size: 28px;
+    }
+    .services .service .service-list .service-sec .service-name p{
+        font-size:16px;
+        line-height:25px;
+    }
+
+    .resome-tabs .container .resome-tab {
+        font-size:20px;
+    }
+
+
+    .footer-section .footer {
+        background-image: url(../images/bg-img.jpg);
+        background-position: 0 0;
+    }
+    .footer-section .footer .about{
+        margin:0;
+    }
+    .footer-section .footer .about .about-text .about-logo h3 {
+        font-size:24px;
+    }
+    .footer-section .footer .about .about-text .text-about p{
+        font-size:15px;
+    }
+    .social-icons{
+        line-height: 50px;
+    }
+    .social-icons a{
+        font-size:18px;
+    }
+    .footer-section .footer .footer-menu {
+        margin-top: 20px;
+    }
+    .footer-section .footer .footer-menu h4 {
+        font-size: 20px;
+        color: #00ffe7;
+        padding: 0 0 14px;
+        margin: 0 0 14px;
+    }
+    .footer .container .footer_2{
+        padding:8px;
+        text-align: center;
+        font-size:14px;
+    }
+    .elms_right {
+        text-align: center;
+        padding: 15px;
+        font-size: 13px;
+    }
+
+
+    }
+
+
+@media screen and (min-width: 991px) and (max-width: 1199px){
+
+    .slick-track svg{
+        transform: scale(0.9);
+    }
+    .slick-dots li button{
+        width: 14px;
+        height:14px;
+    }
+    .slick-dots li.slick-active button:before{
+        width: 8px;
+        height: 8px;
+        top: 1px;
+        left: 1px;
+    }
+    .slider .slider-controls{
+        width: 100%;
+        top :85%;
+        left: 0;
+    }
+    .slider .slider-controls a{
+        color: #eaeaea;
+    }
+    .slider-controls .slicks-prev{
+        margin-left:5%;
+    }
+    .slider-controls .slicks-next{
+        margin-right:5%;
+    }
+
+    .slick-track svg{
+        transform: scale(0.9);
+    }
+    .slick-dots li button{
+        width: 14px;
+        height:14px;
+    }
+    .slick-dots li.slick-active button:before{
+        width: 8px;
+        height: 8px;
+        top: 1px;
+        left: 1px;
+    }
+    .slider .slider-controls{
+        width: 100%;
+        left: 0;
+    }
+    .slider .slider-controls a{
+        color: #eaeaea;
+    }
+    .slider-controls .slicks-prev{
+        margin-left:10%;
+    }
+    .slider-controls .slicks-next{
+        margin-right:10%;
+    }
+    .introduce .introduce-text .who-am-i {
+        position: absolute;
+        top: 70px;
+        left: 150px;
+    }
+    .introduce .introduce-text p {
+        position: absolute;
+        top: 130px;
+        padding: 0 25px 0 0;
+        font-size: 30px;
+    }
+
+
+
+    .services .service .service-list .foot-section svg path{
+        fill: #012b63 !important;
+    }
+    .services .service .service-list .service-sec:nth-child(2){
+        top: 0;
+    }
+    .services .service .service-list .service-sec {
+        margin-bottom: 20px;
+    }
+    .services .service .service-list .service-sec:hover{
+        transform: translateY(10px);
+    }
+    .services .service .service-list .service-sec .service-name{
+        height: auto;
+        border-radius: 30px;
+    }
+    .services .service .service-list .service-sec .service-name .service-icon {
+        transform: scale(0.9);
+    }
+    .services .service .service-list .service-sec .service-name h3{
+        font-size: 28px;
+    }
+    .services .service .service-list .service-sec .service-name p{
+        font-size:16px;
+        line-height:25px;
+    }
+
+    .resome-tabs .container .resome-tab {
+        font-size:20px;
+    }
+
+
+    .footer-section .footer {
+        background-image: url(../images/bg-img.jpg);
+        background-position: 0 0;
+    }
+    .footer-section .footer .about{
+        margin:0;
+    }
+    .footer-section .footer .about .about-text .about-logo h3 {
+        font-size:24px;
+    }
+    .footer-section .footer .about .about-text .text-about p{
+        font-size:15px;
+    }
+    .social-icons{
+        line-height: 50px;
+    }
+    .social-icons a{
+        font-size:18px;
+    }
+    .footer-section .footer .footer-menu {
+        margin-top: 10px;
+    }
+    .footer-section .footer .footer-menu h4 {
+        font-size: 18px;
+        color: #00ffe7;
+        padding: 0 0 14px;
+        margin: 0 0 14px;
+    }
+    .footer .container .footer_2{
+        padding:8px;
+        text-align: center;
+        font-size:14px;
+    }
+    .elm_icon_text{
+        text-align: left;
+    }
+    .elms_right {
+        font-size: 13px;
+    }
+
+
+
+}
+
+@media screen and (min-width: 991px) and (max-width: 1299px){
+  .slider .slider-controls{
+  top:88%;
+  }
+}
