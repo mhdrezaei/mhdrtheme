@@ -1,0 +1,22 @@
+{
+  "name": "mhdrtheme",
+  "version": "1.0.0",
+  "description": "personal website",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "./sass/main.scss ./css/main.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhdrezaei/mhdrtheme.git"
+  },
+  "author": "Mohammad rezaei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mhdrezaei/mhdrtheme/issues"
+  },
+  "homepage": "https://github.com/mhdrezaei/mhdrtheme#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
