@@ -1,0 +1,187 @@
+.navigation{
+
+    &__check{
+        display: none;
+
+        
+    
+    }
+    &__check:checked ~ &__background{
+        transform: scale(90);
+
+
+    }
+    &__check:checked ~ &__list,
+    &__check:checked ~ .menu-navigation-container .menu{
+        opacity: 1;
+        width: 100%;
+        
+    }
+
+
+    &__button{
+        width: 5rem;
+        height: 5rem;
+        position: fixed;
+        top: 2rem;
+        left: 3rem;
+        text-align: center;
+        border-radius: 50%;
+        background-color: var(--white-color);
+        z-index: 2000;
+        border: none;
+        outline: none;
+        box-shadow: 0 1rem 4rem rgba(var(--black-color), 0.2);
+        cursor: pointer;
+
+        @include respond(phone){
+            bottom: 2rem;
+            top: unset;
+        }
+        @include respond(tab-port){
+            bottom: 2rem;
+            top: unset;
+        }
+        @include respond(desktop){
+            bottom: 2rem;
+            top: unset;
+        }
+        @include respond(large-desktop){
+            bottom: 2rem;
+            top: unset;
+        }
+
+
+
+    }
+    &__background{
+        width: 4.5rem;
+        height: 4.5rem;
+        position: fixed;
+        top: 2.2rem;
+        left: 3.2rem;
+        border-radius: 50%;
+        background-image: radial-gradient(var(--primary-color),var(--secondary-color));
+        z-index: 1000;
+        text-align: center;
+    
+        transform-origin: center;
+        transition: all 0.8s;
+
+        @include respond(phone){
+            bottom: 2.2rem;
+            top: unset;
+            
+        }
+        @include respond(tab-port){
+            bottom: 2.2rem;
+            top: unset;
+            
+        }
+
+        @include respond(desktop){
+            bottom: 2rem;
+            top: unset;
+        }
+
+        @include respond(large-desktop){
+            bottom: 2rem;
+            top: unset;
+        }
+
+    }
+    & .menu{
+        list-style: none;
+        position: fixed;
+        top: 25%;
+        left: 0;
+    
+        z-index: 1500;
+        opacity: 0;
+        text-align: center;
+        width: 0;
+        transition: all 0.7s cubic-bezier(0.68, -0.6, 0.32, 1.6); 
+    }
+    & .menu li{
+        margin: 0.8rem 0;
+    }
+    & .menu li a{
+        display: inline-block;
+        text-decoration: none;
+        padding: 1rem 4rem;
+        color: var(--white-color);
+        font-family: inherit;
+        font-size: 3rem;
+        background-image: linear-gradient(120deg , transparent 0% , transparent 50% , var(--white-color) 50%);
+        background-size: 228%;
+        transition: all 0.4s;
+
+        &:hover , &:active{
+            background-position: 100%;
+            color: var(--accent-color);
+            transform: translateX(1rem);
+        }
+    }
+    &__list{
+        list-style: none;
+        position: fixed;
+        top: 25%;
+        left: 0;
+    
+        z-index: 1500;
+        opacity: 0;
+        text-align: center;
+        width: 0;
+        transition: all 0.7s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    }
+    &__item{
+        margin: 0.8rem 0;
+
+    }
+    &__link{
+        display: inline-block;
+        text-decoration: none;
+        padding: 0.5rem 4rem;
+        color: var(--white-color);
+        font-family: inherit;
+        font-size: 3rem;
+        background-image: linear-gradient(120deg , transparent 0% , transparent 50% , var(--white-color) 50%);
+        background-size: 228%;
+        transition: all 0.4s;
+
+        &:hover , &:active{
+            background-position: 100%;
+            color: var(--accent-color);
+            transform: translateX(1rem);
+        }
+    }
+    &__icon{
+        position: relative;
+        margin-top: 3.5rem;
+
+        &--svg{
+            width: 3.5rem;
+            height : 3.5rem;
+            fill: var(--grey-dark-2);
+            position: absolute;
+            top: -3rem;
+            left: -4.2rem;
+            transition: all 0.8s;
+        }
+    }
+    &__circle{
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        display: inline-block;
+        @include border-gradient(#00ffe7, #0c6faa);
+
+        animation: rotateThis 1s linear infinite;
+    }
+    &__check:checked + &__button &__icon &__icon--svg {
+        
+        transform: rotate(180deg);
+        fill: var(--primary-color);
+    }
+
+}

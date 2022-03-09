@@ -38,40 +38,17 @@ jQuery.extend(jQuery.fn, {
 
 jQuery(document).ready(function ($) {
     $(".slider ").each(function () {
-        $(".slid").slick({
+        $(".slide").slick({
             autoplay : false,
+            adaptiveHeight:true,
             dots :true,
-            dotsClass : "slick-dots",
-            slidesToShow : 2,
-            slidesToScroll : 2,
-            prevArrow : '.slicks-prev',
-            nextArrow : '.slicks-next',
-            responsive: [
-                {
-                    breakpoint: 576,
-                    settings: {
-                        slidesToShow: 1,
-                        centerMode: false, /* set centerMode to false to show complete slide instead of 3 */
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 769,
-                    settings: {
-                        slidesToShow: 1,
-                        centerMode: false,
-                        slidesToScroll: 1
-                    }
-                    },
-                {
-                    breakpoint: 1129,
-                    settings: {
-                        slidesToShow: 1,
-                        centerMode: false,
-                        slidesToScroll: 1
-                    }
-                }
-            ]
+            dotsClass : "slide__dots",
+            slidesToShow : 1,
+            rtl:true,
+            slidesToScroll : 1,
+            prevArrow : '.slicks-controls__prev',
+            nextArrow : '.slicks-controls__next',
+            centerMode: false
         });
     });
 

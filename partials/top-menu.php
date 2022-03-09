@@ -1,11 +1,24 @@
 
 <header class="header">
-    <div class="category-menu-section">
-        <h3>category</h3>
-		<?php
-		if (has_nav_menu('side-cat')){
+<div class="navigation">
+      <input type="checkbox" class="navigation__check" id="nav-check">
+      <label for="nav-check" class="navigation__button">
+        <span class="navigation__icon">
+			
+		<svg class="navigation__icon--svg">
+					<use xlink:href="<?php echo get_template_directory_uri() ?>/images/sprite.svg#icon-menu"></use>
+				</svg>
+				
+		</span>
+		<span class="navigation__circle"></span>
+		
+      </label>
+      <div class="navigation__background"></div>
+
+	  <?php
+		if (has_nav_menu('cat-menu')){
 			wp_nav_menu(array(
-				'theme_location' => 'side-cat'
+				'theme_location' => 'cat-menu'
 			));
 		}else{
 			echo"You can add menu here";
@@ -13,34 +26,30 @@
 
 
 		?>
+
+
+
+     
     </div>
-	<nav class="d-flex justify-content-between align-items-center">
-		<div class="container-fluid">
+
+<div class="container-fluid">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed"
-					 data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-					  aria-expanded="false">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>">Mohammad Rezaei</a>
-				</div>
 
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <div class="show-category">
-                        <button type="button" class="navbar-toggle-category">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
-					<?php
+			<nav class="navbar navbar-expand-lg navbar-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+				<img class="navbar__brand--logo" src="<?php echo get_template_directory_uri() ?>/images/brand-logo.png" alt="محمد رضائی">
+              <span class="navbar__brand-text">وب سایت شخصی محمد رضائی</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="تبديل التنقل">
+			<svg class="navbar__svg">
+					<use xlink:href="<?php echo get_template_directory_uri() ?>/images/sprite.svg#icon-menu"></use>
+				</svg>
+			<!-- <span class="navbar-toggler-icon"></span> -->
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+			<?php
                     if (has_nav_menu('top-bar-menu')){
                         wp_nav_menu(array(
 	                        'theme_location' => 'top-bar-menu'
@@ -48,14 +57,21 @@
                     }else{
                         echo"You can add menu here";
                     }
+			?>
+              
+              <form class="d-flex navbar__form">
+                <input class="navbar__input" name="s" type="text" placeholder="جستجو..." aria-label="جستجو...">
+                <button class="navbar__btn" type="submit">
+				<svg class="navbar__svg--search">
+					<use xlink:href="<?php echo get_template_directory_uri() ?>/images/sprite.svg#icon-search"></use>
+				</svg>
+				</button>
+              </form>
+            </div>
+          </div>
+        </nav>
 
 
-                    ?>
+</div>
+</div>
 
-				</div><!-- /.navbar-collapse -->
-
-
-			</div>
-		</div><!-- /.container-fluid -->
-	</nav>
-	<div class="clearfix"></div>

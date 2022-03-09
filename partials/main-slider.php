@@ -1,113 +1,61 @@
 <?php
 $slider_info = mhdr_get_option('slider-setting');
-$i = 0;
+
 ?>
 <section class="slider-section">
 
-	<div class="slider">
-		<div class="slid">
+
+
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="slider" >
+		<div class="slide" >
 			<?php
-
             foreach ($slider_info as $slide) {
-//	            $val = array_values($slide);
-
-
-
-
-                if ( ( $i / 2 ) == 0 ) {
-
 	            ?>
+                <div class="slides"  >
+                <figure class="slides__shape" >
+            <img src="<?php echo $slide['sliderimg']; ?>" alt="person" class="slides__shape__img" >
+            
+          </figure>
+          <div class="slides__description">
+              <h2 class="slides__title" >چگونه از هک شدن وب سایت جلوگیری کنیم؟؟؟</h2>
+              <p class="slides__summary" >
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده
+              </p>
+              <button class="btn btn-blue-accent" >مشاهده مطلب</button>
+          </div>
 
-                <svg viewBox="25 50 120 120" aria-selected="false" class="first-svg" xmlns="http://www.w3.org/2000/svg"
-                     width="800" height="500">
-                    <defs>
-                        <pattern id="img<?php echo $i; ?>" x="230" y="250" class="first-pattern" color-rendering="optimizeSpeed"
-                                 color-interpolation="linearRGB" color-profile="#fff" color="#fff"
-                                 patternUnits="userSpaceOnUse" width="500" height="500">
-                            <image href="<?php echo $slide['sliderimg']; ?>" x="188"
-                                   y="192" width="136" height="165"/>
-                        </pattern>
-                    </defs>
-                    <a href="<?php echo $slide['slider_img_link'] ?>">
-                    <path fill="url(#img<?php echo $i; ?>)" stroke="white" stroke-width="2"
-                          d="M35.1,-43.6C38.1,-39.3,28,-21.2,31.8,-4.9C35.5,11.5,53.1,26.2,53.2,35C53.2,43.8,35.7,46.8,19.2,52.8C2.8,58.7,-12.5,67.7,-26.7,65.8C-40.9,63.9,-53.8,51.2,-65.1,35.7C-76.3,20.1,-85.9,1.6,-81,-12.3C-76.2,-26.2,-57,-35.7,-41.1,-37.7C-25.2,-39.7,-12.6,-34.3,1.7,-36.4C16.1,-38.4,32.1,-47.9,35.1,-43.6Z"
-                          transform="translate(100 100)"></path>
-                    </a>
-                </svg>
-
-
+                </div>
 	            <?php
-            }else{
-				?>
+            }
+                ?>
 
-                <svg viewBox="55 40 100 135" aria-selected="false" xmlns="http://www.w3.org/2000/svg" width="800"
-                     height="500">
-                    <defs>
-                        <pattern id="img<?php echo $i; ?>" x="250" y="250" color="#fff" patternUnits="userSpaceOnUse" width="500"
-                                 height="500">
-                            <image href="<?php echo $slide['sliderimg']; ?>" x="192" y="192"
-                                   width="130" height="130"/>
-                        </pattern>
-                    </defs>
-                    <a href="<?php echo $slide['slider_img_link'] ?>">
-                    <path fill="url(#img<?php echo $i; ?>)" stroke="white" stroke-width="2"
-                          d="M49.1,-52.5C62.1,-47.6,69.9,-30.7,71.3,-13.9C72.6,2.8,67.4,19.3,57.6,30.4C47.8,41.5,33.5,47,17.7,56C1.9,64.9,-15.3,77.1,-23.7,71.4C-32.1,65.6,-31.7,41.8,-38.6,24.7C-45.5,7.7,-59.8,-2.7,-59.2,-11.2C-58.6,-19.6,-43.1,-26.2,-30.7,-31.2C-18.4,-36.2,-9.2,-39.5,4.4,-44.8C18.1,-50.1,36.1,-57.3,49.1,-52.5Z"
-                          transform="translate(100 100)"></path>
-                    </a>
+       
+
+
+		</div>
+
+
+        <div class="slicks-controls">
+			<a class="slicks-controls__prev pull-left" href="#">
+                <svg class="slicks-controls__slider-arrow">
+                    <use xlink:href="<?php echo get_template_directory_uri(  )?>/images/sprite.svg#icon-arrow-circle-left" ></use>
                 </svg>
-
-
-				<?php
-			}
-            $i++;
-            } ?>
-
-
-<!---->
-<!--            <svg viewBox="25 50 120 120" aria-selected="false" class="first-svg" xmlns="http://www.w3.org/2000/svg" width="800" height="500">-->
-<!--				<defs>-->
-<!--					<pattern id="img3" x="230" y="250" class="first-pattern" color-rendering="optimizeSpeed" color-interpolation="linearRGB" color-profile="#fff" color="#fff" patternUnits="userSpaceOnUse" width="500" height="500">-->
-<!--						<image  href="--><?php //echo get_template_directory_uri().'/images/mhd3.jpg' ?><!--" x="188" y="192" width="136" height="165" />-->
-<!--					</pattern>-->
-<!--				</defs>-->
-<!--				<path fill="url(#img3)"  stroke="white" stroke-width="2" d="M35.1,-43.6C38.1,-39.3,28,-21.2,31.8,-4.9C35.5,11.5,53.1,26.2,53.2,35C53.2,43.8,35.7,46.8,19.2,52.8C2.8,58.7,-12.5,67.7,-26.7,65.8C-40.9,63.9,-53.8,51.2,-65.1,35.7C-76.3,20.1,-85.9,1.6,-81,-12.3C-76.2,-26.2,-57,-35.7,-41.1,-37.7C-25.2,-39.7,-12.6,-34.3,1.7,-36.4C16.1,-38.4,32.1,-47.9,35.1,-43.6Z" transform="translate(100 100)" ></path>-->
-<!--			</svg>-->
-<!--			<svg viewBox="55 40 100 135" aria-selected="false" xmlns="http://www.w3.org/2000/svg" width="800" height="500">-->
-<!--				<defs>-->
-<!--					<pattern id="img2" x="250" y="250"  color="#fff" patternUnits="userSpaceOnUse" width="500" height="500">-->
-<!--						<image href="--><?php //echo get_template_directory_uri().'/images/mhd.jpg' ?><!--" x="192" y="192" width="130" height="130" />-->
-<!--					</pattern>-->
-<!--				</defs>-->
-<!--				<path fill="url(#img2)"   stroke="white" stroke-width="2" d="M49.1,-52.5C62.1,-47.6,69.9,-30.7,71.3,-13.9C72.6,2.8,67.4,19.3,57.6,30.4C47.8,41.5,33.5,47,17.7,56C1.9,64.9,-15.3,77.1,-23.7,71.4C-32.1,65.6,-31.7,41.8,-38.6,24.7C-45.5,7.7,-59.8,-2.7,-59.2,-11.2C-58.6,-19.6,-43.1,-26.2,-30.7,-31.2C-18.4,-36.2,-9.2,-39.5,4.4,-44.8C18.1,-50.1,36.1,-57.3,49.1,-52.5Z" transform="translate(100 100)" ></path>-->
-<!--				<!--                            <image href="images/layer6.png" height="200" width="200"/>-->-->
-<!--			</svg>-->
-<!--			<svg viewBox="25 50 120 120" aria-selected="false" class="first-svg" xmlns="http://www.w3.org/2000/svg" width="800" height="500">-->
-<!--				<defs>-->
-<!--					<pattern id="img1" x="250" y="250" class="first-pattern" color-rendering="optimizeSpeed" color-interpolation="linearRGB" color-profile="#fff" color="#fff" patternUnits="userSpaceOnUse" width="500" height="500">-->
-<!--						<image  href="--><?php //echo get_template_directory_uri().'/images/mhd2.jpg' ?><!--" x="192" y="192" width="130" height="130" />-->
-<!--					</pattern>-->
-<!--				</defs>-->
-<!--				<path fill="url(#img1)"  stroke="white" stroke-width="2" d="M35.1,-43.6C38.1,-39.3,28,-21.2,31.8,-4.9C35.5,11.5,53.1,26.2,53.2,35C53.2,43.8,35.7,46.8,19.2,52.8C2.8,58.7,-12.5,67.7,-26.7,65.8C-40.9,63.9,-53.8,51.2,-65.1,35.7C-76.3,20.1,-85.9,1.6,-81,-12.3C-76.2,-26.2,-57,-35.7,-41.1,-37.7C-25.2,-39.7,-12.6,-34.3,1.7,-36.4C16.1,-38.4,32.1,-47.9,35.1,-43.6Z" transform="translate(100 100)" ></path>-->
-<!--			</svg>-->
-<!--			<svg viewBox="55 40 100 135" aria-selected="false" xmlns="http://www.w3.org/2000/svg" width="800" height="500">-->
-<!--				<defs>-->
-<!--					<pattern id="img2" x="250" y="250"  color="#fff" patternUnits="userSpaceOnUse" width="500" height="500">-->
-<!--						<image href="--><?php //echo get_template_directory_uri().'/images/mhd.jpg' ?><!--" x="192" y="192" width="130" height="130" />-->
-<!--					</pattern>-->
-<!--				</defs>-->
-<!--				<path fill="url(#img2)"   stroke="white" stroke-width="2" d="M49.1,-52.5C62.1,-47.6,69.9,-30.7,71.3,-13.9C72.6,2.8,67.4,19.3,57.6,30.4C47.8,41.5,33.5,47,17.7,56C1.9,64.9,-15.3,77.1,-23.7,71.4C-32.1,65.6,-31.7,41.8,-38.6,24.7C-45.5,7.7,-59.8,-2.7,-59.2,-11.2C-58.6,-19.6,-43.1,-26.2,-30.7,-31.2C-18.4,-36.2,-9.2,-39.5,4.4,-44.8C18.1,-50.1,36.1,-57.3,49.1,-52.5Z" transform="translate(100 100)" ></path>-->
-<!--				<!--                            <image href="images/layer6.png" height="200" width="200"/>-->-->
-<!--			</svg>-->
-
-
+            </a>
+			<a class="slicks-controls__next pull-right" href="#">
+                <svg class="slicks-controls__slider-arrow">
+                    <use xlink:href="<?php echo get_template_directory_uri(  )?>/images/sprite.svg#icon-arrow-circle-right" ></use>
+                </svg>    
+            </a>
 		</div>
-		<div class="slider-controls">
-			<a class="slicks-prev pull-left" href="#"><i class="fa fa-arrow-circle-left"></i></a>
-			<a class="slicks-next pull-right" href="#"><i class="fa fa-arrow-circle-right"></i> </a>
-		</div>
-
 	</div>
 
+    
+    </div>
+        </div>
+        </div>
 </section>
 </header>
 <div class="end-header">

@@ -1,0 +1,118 @@
+.btn{
+ 
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  border-radius: 100px;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  border: none;
+
+  @include respond(phone){
+    transform: scale(0.7);
+  }
+
+  @include respond(tab-port){
+    transform: scale(0.8);
+  }
+  @include respond(tab-port){
+    transform: scale(0.9);
+  }
+
+&:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  @include respond(phone){
+    transform: translateY(-3px) scale(0.7);
+  }
+  @include respond(tab-port){
+    transform: translateY(-3px) scale(0.8);
+  }
+  @include respond(desktop){
+    transform: translateY(-3px) scale(0.9);
+  }
+}
+&:active {
+  transform: translateY(-1px);
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+&::after {
+  content: "";
+  display: inline-block;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: all 0.4s;
+}
+&:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+&-white {
+  background: $white-color;
+  color: #777;
+  &::after {
+    content: "";
+    background-color: $white-color;
+  }
+}
+&-blue-accent {
+  background: var(--accent-color);
+  color: var(--grey-light-1);
+  font-size: 1.3rem;
+  &:hover{
+    color: var(--grey-light-2) !important;
+  }
+  &::after {
+    content: "";
+    background-color: var(--accent-color);
+
+  
+  }
+}
+&-green {
+  background: var(--accent-color);
+  color: $white-color;
+  &::after {
+    content: "";
+    background-color: var(--accent-color);
+  }
+}
+
+&-animation {
+  animation: moveInTop 1s ease-in-out 0.75s;
+  animation-fill-mode: backwards;
+}
+
+}
+
+.btn-text{
+  &:link , &:visited{
+    text-decoration: none;
+    display: inline-block;
+    // background: $white-color;
+    padding: 0.7rem;
+    color: var(--accent-color);
+    font-size: $defaul-font-size;
+    border-bottom: 1px solid var(--accent-color);
+    transition: all 0.3s;
+  }
+  &:hover{
+    background-color: var(--accent-color) ;
+    color: $white-color;
+    box-shadow: 0 0.5rem 10rem rgba($black-color, 0.2);
+    transform: translateY(-2px);
+  }
+  &:active{
+    box-shadow: 0 0.2rem 5rem rgba($black-color, 0.2);
+    transform: translateY(0);
+
+  }
+}

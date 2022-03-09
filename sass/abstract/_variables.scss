@@ -1,0 +1,38 @@
+
+@font-face {
+    font-family: 'mhdr';
+    src: url("../fonts/iran-sans/IRAN Sans.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+:root{
+    --primary-color : #012b64;
+    --secondary-color : #00ffe7;
+    --accent-color : #0c6faa;
+    --body-background-color : #eaeaea40;
+
+    --white-color : #fff;
+    --black-color : #000;
+
+    --grey-light-1 : #ececec;
+    --grey-light-2 : #cccccc;
+    --grey-light-3 : #aaaaaa;
+    --grey-light-4 : #999999;
+    --grey-dark-4 : #111111;
+    --grey-dark-3 : #222222;
+    --grey-dark-2 : #333333;
+    --grey-dark-1 : #444444;
+
+
+    --direction : rtl;
+
+
+    --box-shadow-1: 0 5rem 3rem rgba(var(--grey-dark-2), 0.2) ;
+    --box-shadow-2: 0 1.5rem 3rem rgba(var(--grey-dark-2), 0.2) ;
+    --box-shadow-3: 0 2.5rem 3rem rgba(var(--grey-dark-2), 0.2) ;
+
+}
+
+$white-color : #fff;
+$black-color : #000;
+$defaul-font-size: 1.6rem;

@@ -1,0 +1,230 @@
+.slider{
+    position: relative;
+    margin: 4rem 0;
+    border: 5px solid rgba($white-color, .9);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.5s;
+
+    &:hover .slicks-controls{
+        opacity: 1;
+        transform: translateY(-6rem);
+    }
+    &:hover .slide .slide__dots{
+        position: relative;
+        transform: translateY(0);
+        opacity: 1;
+        padding: 3rem ;
+    }
+
+  
+}
+.slides{
+    position: relative;
+   
+    &__shape{
+        
+        // transform: translateX(-3rem) skewX(12deg);
+        transition: all .5s;
+        backface-visibility: hidden;
+
+        &__img{
+            width: 100%;
+            // transform: scale(1.4);
+            transition: all .5s;
+            
+        }
+        &--caption{
+            color: $white-color;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , 20%);
+            text-transform: uppercase;
+            font-size: inherit;
+            opacity: 0;
+            text-align: center;
+            transition: all .5s;
+
+        }
+    }
+
+    &:hover &__shape--caption{
+        opacity: 1;
+        transform: translate(-50% , -50%);
+    }
+    &:hover &__description{
+        opacity: 1;
+        transform: translate(-50% , -50%);
+        @include respond(phone){
+            transform: translate(-50% , -45%);
+
+        }
+        @include respond(tab-port){
+            transform: translate(-50% , -50%);
+
+        }
+    }
+
+    &:hover &__shape__img{
+        backface-visibility: hidden;
+        transform: scale(1);
+        filter: blur(3px) brightness(80%);
+    }
+
+    &__description{
+        color: $white-color;
+        background-color: rgba($white-color, .8);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , 40%);
+            text-transform: uppercase;
+            font-size: inherit;
+            opacity: 0;
+            text-align: center;
+            transition: all .5s;
+            padding: 1rem;
+            margin-bottom: 1rem;  
+            border-radius: 1px;
+           
+            @include respond(phone){
+                width: 100%;
+                transform: translate(-50% , 50%);
+            }
+            @include respond(tab-port){
+                width: 100%;
+                transform: translate(-50% , 50%);
+                padding: 0.7rem;
+            }
+            @include respond(desktop){
+                width: 100%;
+                border-radius: unset;
+            
+            }
+    }
+    &__title{
+        color: var(--accent-color);
+        text-align: center;
+        margin: 1.5rem;
+        font-size: inherit;
+        @include respond(phone){
+            margin: 0;
+            
+        }
+        @include respond(tab-port){
+            margin: 0.7rem;
+        }
+
+        @include respond(desktop){
+        margin: 0.5rem;
+        }
+    }
+    &__summary{
+        font-size: inherit;
+        color: var(--grey-dark-2);
+        padding: 1rem;
+        line-height: 1.7;
+        text-align: justify;
+        margin: 1rem;
+
+        @include respond(phone){
+            width: 100%;
+            margin: 0;
+        }
+        @include respond(tab-port){
+            width: 100%;
+            margin: 0.2rem;
+            padding: 0.2rem;
+        }
+        @include respond(desktop){
+            width: 100%;
+            border-radius: unset;
+        
+        }
+    }
+}
+
+// arrow controler
+.slicks-controls{
+    
+    text-align: center;
+    color: $white-color;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    transform: translateY(-9rem);
+    opacity: 0;
+    transition: all 0.5s;
+
+    &__prev , &__next{
+        display: flex;
+        justify-content: center;
+        width: 7rem;
+        height: 7rem;
+        
+        cursor: pointer;
+
+    }
+
+    &__slider-arrow{
+        width: 5rem;
+        height: 5rem;
+        fill: rgba($white-color, .8);
+    }
+
+}
+
+// slider dots
+
+.slide{
+    text-align: center;
+    &__dots{
+    position: absolute;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+    display: inline-block;
+    transform: translateY(-6rem);
+    opacity: 0;
+    transition: all 0.5s;
+
+    & li{
+        position: relative;
+        display: inline-block;
+        height: 12px;
+        margin:0 10px;
+
+    & button{
+
+        position: relative;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        border-radius: 50%;
+        border: 2px solid #b8b2b2;
+        text-indent: -9999px;
+        padding: 0;
+        margin:0;
+        outline: 0;
+
+    }
+    }
+
+    & li.slick-active button:before {
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #0d70ab;
+        top: 2px;
+        left: 2px;
+    }
+}
+}
