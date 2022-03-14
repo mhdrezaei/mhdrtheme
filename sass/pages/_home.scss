@@ -1,0 +1,351 @@
+// introduce section
+.introduce {
+  &__text {
+    position: relative;
+  }
+  &__title {
+    width: 100%;
+    position: absolute;
+    top: 10rem;
+    text-align: center;
+    font-size: 4rem;
+    color: var(--accent-color);
+    @include respond(tab-port) {
+      top: 20rem;
+    }
+  }
+  &__description {
+    position: absolute;
+    top: 18rem;
+    padding: 0 2rem;
+    font-size: 2.2rem;
+    text-align: center;
+    line-height: 4rem;
+    color: #095891;
+
+    @include respond(tab-port) {
+      top: 32rem;
+    }
+  }
+}
+
+// service section
+
+.service-list {
+  position: relative;
+  top: -3px;
+  padding: 0;
+  margin-bottom: 8rem;
+
+  & .container .row:first-child {
+    transform: translateY(-2.5rem);
+  }
+  @include respond(phone) {
+    margin: 0;
+  }
+
+  &__sec {
+    transition: all 0.3s ease-in-out;
+
+    @include respond(phone) {
+      margin: 3.5rem;
+    }
+    @include respond(tab-port) {
+      margin-bottom: 4.5rem;
+    }
+
+    &:nth-child(2) {
+      top: -2.5rem;
+    }
+    &:hover {
+      transform: translateY(3rem);
+    }
+  }
+  &__name {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10%;
+    padding: 1rem 1.5rem;
+    height: max-content;
+    box-shadow: 0px 1rem 6rem 0 rgba($black-color, 0.1);
+    transition: background 0.3s, border 0.3s, border-radius 0.3s,
+      box-shadow 0.3s;
+  }
+  &__icon {
+    text-align: center;
+  }
+  &__title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #012b64;
+    padding: 1rem 0;
+  }
+
+  &__desc-p {
+    padding: 1rem;
+    margin: 0;
+    font-size: 1.6rem;
+    color: #aaaaaa;
+    line-height: 3.5rem !important;
+    text-align: center;
+  }
+  & .foot-section svg path {
+    fill: #012b63 !important;
+  }
+  & .foot-section {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 158px;
+    background-color: var(--primary-color);
+    z-index: -1;
+  }
+  & .foot-section svg path {
+    fill: var(--primary-color) !important;
+  }
+}
+
+// show project in home page
+
+.project-slider-control {
+  text-align: center;
+  color: $white-color;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  transition: all 0.5s;
+  z-index: -1;
+  @include respond(phone){
+    display: none;
+  }
+
+  &__prev-p,
+  &__next-p {
+    display: flex;
+    justify-content: center;
+    width: 7rem;
+    height: 7rem;
+    cursor: pointer;
+  }
+
+  &__slider-arrow {
+    width: 5rem;
+    height: 5rem;
+    fill: rgba($white-color, 0.8);
+  }
+}
+
+.slider-project {
+  text-align: center;
+  &__dots {
+    text-align: center;
+    padding: 3rem;
+    margin: 2rem 0 0;
+    z-index: 1;
+    display: inline-block;
+    transition: all 0.5s;
+
+    & li {
+      position: relative;
+      display: inline-block;
+      height: 12px;
+      margin: 0 10px;
+
+      & button {
+        position: relative;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        border-radius: 50%;
+        border: 2px solid #b8b2b2;
+        text-indent: -9999px;
+        padding: 0;
+        margin: 0;
+        outline: 0;
+      }
+    }
+
+    & li.slick-active button:before {
+      content: "";
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #0d70ab;
+      top: 2px;
+      left: 2px;
+    }
+  }
+}
+// resume section
+
+.resome-section .head-resome-section {
+  background-color: var(--primary-color);
+  top: -2px;
+  transform: rotateX(180deg);
+  display: grid;
+  width: calc(100%);
+  & svg {
+    width: 100%;
+    height: 16rem;
+    transform: translateX(-50%);
+    left: 50%;
+    position: relative;
+  }
+}
+
+.resome {
+  background-color: var(--primary-color);
+
+  &-section{
+    margin-bottom: 3rem;
+}
+
+  &-tabs{
+    background-color: #085790;
+  }
+  &-block{
+    display: block !important;
+}
+
+  &__select{
+    display: none;
+
+    @include respond(phone){
+      display: inline-block;
+      text-align: center;
+      width: 100%;
+      padding: 1rem;
+    }
+    @include respond(tab-port){
+      display: inline-block;
+      text-align: center;
+      width: 100%;
+      padding: 1rem;
+    }
+    & select{
+      display: none;
+      width: 70%;
+      outline-color: var(--secondary-color);
+      margin: 0;
+      font-size: 1.8rem;
+      @include respond(phone){
+        display: inline-block;
+      }
+      @include respond(tab-port){
+        display: inline-block;
+      }
+    }
+  }
+
+  &-tabs .container .resome-tab {
+    color: rgba(255,255,255,.6);
+    font-size:2rem;
+    padding:20px 0;
+    text-align: center;
+    cursor: pointer;
+    border-color: #fff;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 4px solid transparent;
+    transition: all 0.2s ease-in-out;
+
+    &:hover{
+      color: var(--secondary-color);
+      transform: scale(1.1);
+    }
+
+    &  .resome-tab-link{
+      text-decoration: none;
+
+      & span{
+        margin-left:0.5rem;
+    }
+  }
+}
+
+&-tabs .container .active{
+  background-color: var(--white-color);
+  color: var(--accent-color);
+  border-top:1px solid var(--accent-color) ;
+  cursor: default;
+
+  &:hover{
+    color: var(--accent-color);
+    transform: scale(1);
+  }
+}
+
+  & .resome-content {
+    background-image: url("../images/bg-img.jpg");
+    background-position: 0% 0%;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 4rem 0;
+    z-index: 10;
+    display: none;
+    transition: all 0.2s ease-in-out;
+
+    & .container .resome-content-right {
+      padding-top: 1rem;
+
+      & .resome-text p {
+        text-align: justify;
+        padding: 0 1rem;
+        font-size: 1.8rem;
+        line-height: 3.5rem;
+        color: #ffffff;
+        word-break: normal;
+        text-shadow: 1px 1px $black-color;
+      }
+    }
+  }
+
+  &-text{
+    @include respond(phone){
+      padding: 3rem;
+    }
+  }
+}
+//resume : what did i do
+.title-resome h3 {
+  font-size: 6rem;
+  color: var(--secondary-color);
+  padding: 4rem 1rem;
+  text-align: right;
+  text-shadow: 1px 1px $black-color;
+}
+.progress {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  margin-bottom: 1rem;
+  position: relative;
+  padding: 0 0.5rem;
+  display: flex;
+  height: 4rem;
+  &-value {
+    animation: load 3s normal forwards;
+    box-shadow: 0 1rem 4rem -1rem #fff;
+    border-radius: 100px;
+    background: #fff;
+    height: 3rem;
+  }
+  &-value span {
+    font-size: 1.4rem;
+    margin: 3rem;
+    line-height: 3rem;
+    color: #095690;
+  }
+}
+.map-contact{
+  @include respond(phone){
+    padding: 3rem;
+  }
+}

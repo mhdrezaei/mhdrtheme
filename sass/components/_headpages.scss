@@ -1,0 +1,54 @@
+.head__page{
+    position: relative;
+    padding-top: 8rem;
+    padding-bottom: 10rem;
+
+    &--title-page{
+        width: 128rem;
+        max-width: 95%;
+        position: relative;
+        margin: 0 auto;
+        text-align: center;
+
+        & h1{
+            font-size: 6rem;
+            color: #ffffff;
+            font-weight: 800;
+            line-height: 10rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 0px 3px 1px #020202;
+        }
+    }
+
+    &--breadcrumbs{
+        background-color: transparent;
+        text-align: center;
+        padding-top: 4rem;
+        font-size: 2rem;
+        color: #ffffff;
+
+        & i{
+            color: #ffffff;
+            margin:0 5px;
+        }
+        & span{
+            color: #ffffff;
+        }
+        & a {
+            font-size:2rem;
+            color: #00deff;
+            text-decoration: none;
+            transition: all 0.4s;
+
+            &:hover{
+                text-shadow: 0px 1px 1px #020202;
+                transform: scale(1.1);
+            }
+        }
+
+        & a span i{
+            color: #00deff;
+        }
+    }
+}

@@ -1,42 +1,37 @@
-<div class="col-md-4 col-sm-12 sidebar-section">
-	<div class="sidebar">
-		<div class="sidebar-widget">
-			<div class="search-blog widget">
-				<form role="search" method="get" class="search-form" action="">
-					<input type="search" class="search-field" placeholder="Search …" value="" name="s">
-					<button name="submit" type="submit" class="search-submit">Search</button>
-				</form>
+<div class="col-md-4 col-sm-12 ">
+	<div class="sidebar-section">					
+		<div class="sidebar">
+			<div class="sidebar__widget">
+				<div class="sidebar__search-blog widget">
+					<form role="search" method="get" class="sidebar__search-form" action="">
+						<input type="search" class="sidebar__search-field" placeholder="جستجو..." value="" name="s">
+						<button name="submit" type="submit" class="sidebar__search-submit">بگرد</button>
+					</form>
 
-			</div>
-			<!--      Categories Sidebar           -->
-			<div class="sidebar-widget">
-				<div class="widget-title">
-					<h4>Categoris</h4>
 				</div>
-				<div class="categories">
+			<!--      Categories Sidebar           -->
+			<div class="sidebar__widget">
+				<div class="sidebar__widget--title">
+					<h4>دسته بندی</h4>
+				</div>
+				<div class="sidebar__widget--categories">
 					<?php
 					if(has_nav_menu('side-cat')){
 
 						wp_nav_menu(array('theme_location' =>'side-cat'));
 					}
 					?>
-<!--					<ul>-->
-<!--						<li><a href="">Backend</a></li>-->
-<!--						<li><a href="">Frontend</a></li>-->
-<!--						<li><a href="">Wordpress</a></li>-->
-<!--						<li><a href="">Plugin</a></li>-->
-<!--						<li><a href="">Theme</a></li>-->
-<!--					</ul>-->
+
 				</div>
 
 
 			</div>
 			<!--      Least post blog             -->
-			<div class="sidebar-widget">
-				<div class="widget-title">
-					<h4>least Post</h4>
+			<div class="sidebar__widget">
+				<div class="sidebar__widget--title">
+					<h4>آخرین مطالب</h4>
 				</div>
-				<div class="last-blog-post-sidebar widget">
+				<div class="sidebar__lastpost widget">
 
 					<?php
 					$args = array(
@@ -50,27 +45,40 @@
 					while ($query->have_posts()) {
 						$query->the_post();
 						?>
-						<div class="col-md-12 col-xs-12 post-item">
-							<div class="col-md-3 col-xs-3 thumbnail-widget">
-								<a class="link-img-post" href="<?php the_permalink(); ?>">
+						<div class="col-md-12 col-12 ">
+							<div class="sidebar__lastpost--post-item">
+							<div class="col-md-12 col-12">
+								<div class="sidebar__lastpost--thumbnail-widget">
+								<a class="sidebar__lastpost--link-img-post" href="<?php the_permalink(); ?>">
 									<img src="<?php the_post_thumbnail_url(); ?>" alt="" class="img-responsive">
 									<i class="fas fa-link"></i>
 								</a>
+								</div>
 							</div>
-							<div class=" col-md-9 col-xs-9 post-detail">
-								<div class="col-md-12 title-post-lp-widget"><h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+							<div class=" col-md-12 col-12">
+								<div class="sidebar__lastpost--detail" >
+									<div class="col-md-12 ">
+										<div class="sidebar__lastpost--detail--title-post" >
+										<h3>
+											<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+										</h3>
+									</div>
 								</div>
 
-								<div class="col-md-12 post-meta"><i class="fa fa-calendar-times"></i><?php the_date(); ?></div>
-							</div>
-
+								<div class="col-md-12 ">
+									<div class="sidebar__lastpost--post-meta">	
+									<i class="fa fa-calendar-times"></i><span><?php the_date(); ?></span>
+									</div>
+								</div>
+									</div>
+						</div>
 						</div>
 						<div class="clearfix"></div>
 						<?php
 					}
 					}
 					?>
-
+				</div>
 				</div>
 			</div>
 
@@ -78,39 +86,43 @@
 
 		</div>
 		<!--      portfolio section              -->
-		<div class="sidebar-widget">
-			<div class="widget-title">
-				<h4>Portfolio</h4>
+		<div class="sidebar__widget">
+			<div class="sidebar__widget--title">
+				<h4>پروژه ها</h4>
 			</div>
-			<div class="portfolio widget">
-				<a class="portfolio-link-sb" href="#" title="">
-					<img width="150" height="150" src="images/f1-150x150.jpg" data-src="" class="portfolio-img-sb img-responsive img-rounded" alt="" >
+			<?php
+			$new_project = new WP_Query( 'post_type=project&posts_per_page=5' );
+			if ( $new_project->have_posts() ):
+			while ( $new_project->have_posts() ): $new_project->the_post();
+			$terms = get_the_terms( $post->ID, 'projectstype' );
+			?>
+			<div class="col-12 col-md-12">
+			<div class="sidebar__widget--portfolio widget">
+				
+				
+				<a class="sidebar__widget--portfolio-link" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+					<h4 class="sidebar__widget--portfolio-link-title"><?php the_title(); ?></h4>
+					<img src="<?php the_post_thumbnail_url(); ?>" data-src="<?php the_post_thumbnail_url(); ?>" class="portfolio-img-sb img-responsive img-rounded" alt="<?php the_title(); ?>" >
 					<i class="fas fa-link"></i>
 				</a>
-				<a class="portfolio-link-sb" href="#" title="">
-					<img width="150" height="150" src="images/f1-150x150.jpg" data-src="" class="portfolio-img-sb img-responsive img-rounded" alt="" >
-					<i class="fas fa-link"></i>
-				</a>
-				<a class="portfolio-link-sb" href="#" title="">
-					<img width="150" height="150" src="images/f1-150x150.jpg" data-src="" class="portfolio-img-sb img-responsive img-rounded" alt="" >
-					<i class="fas fa-link"></i>
-				</a>
-				<a class="portfolio-link-sb" href="#" title="">
-					<img width="150" height="150" src="images/f1-150x150.jpg" data-src="" class="portfolio-img-sb img-responsive img-rounded" alt="" >
-					<i class="fas fa-link"></i>
-				</a>
-				<a class="portfolio-link-sb" href="#" title="">
-					<img width="150" height="150" src="images/f1-150x150.jpg" data-src="" class="portfolio-img-sb img-responsive img-rounded" alt="" >
-					<i class="fas fa-link"></i>
-				</a>
-				<a class="portfolio-link-sb" href="#" title="">
-					<img width="150" height="150" src="images/f1-150x150.jpg" data-src="" class="portfolio-img-sb img-responsive img-rounded" alt="" >
-					<i class="fas fa-link"></i>
-				</a>
+			</div>
+			</div>
+			<?php endwhile;
+
+			?>
+			<?php else: echo 'there is not any project exist...'; ?>
+			<?php endif;
+			?>
+
+
 				<div class="clearfix"></div>
 			</div>
 
 
+			</div>
 		</div>
 	</div>
 </div>
+</div>
+
+

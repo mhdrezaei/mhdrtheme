@@ -1,0 +1,104 @@
+.blog{
+
+    &__main-content{
+        margin-top: 10rem;
+    }
+
+    &__post{
+        margin-bottom: 3rem;
+        background-color: var(--white-color);
+        border-radius: 1rem;
+        box-shadow: 0 0 0.8rem 0.8rem var(--grey-light-1);
+
+        @include respond(phone){
+            margin: 0 2rem;
+        }
+
+        &:hover{
+            box-shadow: 0 0 1rem 1rem var(--grey-light-1);
+        }
+        &:hover &--thumbnail{
+            background-color: var(--accent-color);
+            border-radius: 1rem 1rem 0 0;
+
+            & > i{
+                transform: translate(-50%,-50%) scale(1);
+                opacity: 1;
+            }
+            & > img {
+                opacity: 0.2;
+            }
+        }
+       
+        &--img{
+            padding: 0;
+        }
+
+        &--thumbnail{
+            position: relative;
+            display: inline-block;
+            background: 0 0;
+            box-sizing: border-box;
+            overflow: hidden;
+            transition: all .2s ease-in-out;
+
+            & img{
+                background-color: rgba(21, 59, 84, 0.2);
+                border-radius: 1rem 1rem 0 0;
+            }
+
+            & i {
+                position: absolute;
+                line-height: 1em;
+                padding: 2.6rem;
+                font-size: 2rem;
+                border-radius: 100%;
+                background: rgba(255, 255,255,0.9);
+                color: rgba(0, 74, 176,0.7);
+                left: 50%;
+                top: 50%;
+                opacity: 0;
+                transform: translate(-50%,-50%) scale(.1);
+                text-align: center;
+                transition: all .2s ease-in-out;
+            }
+        }
+
+        &--info{
+            padding: 0;
+        }
+        &  h2{
+            font-size: 2.6rem;
+            padding:1.5rem 2rem;
+            margin-top:35px;
+            color: #0a5a95;
+        }
+
+        &--excerpt{
+
+            & p{
+                font-size: 1.6rem;
+                padding:0 2rem;
+                text-align: justify;
+                line-height: 2.8rem;
+                color: #434343;
+
+            }
+        }
+
+        &--metadata{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: var(--grey-light-2);
+            font-size: 1.1rem;
+            padding: 1rem;
+            border-radius: 0 0 1rem 1rem;
+        }
+    }
+
+    &__see-more{
+        padding: 2rem;
+        text-align: left;
+    }
+}

@@ -120,13 +120,7 @@
         text-align: left;
         word-break: break-all;
     }
-    .resome-section .resome select{
-        width: 92%;
-        font-family: 'mhdr';
-        font-size: 18px;
-        display: inline-block;
-        margin: 4px 0 4px 20px;
-    }
+
     .resome-tabs{
         display: none;
     }

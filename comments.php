@@ -7,21 +7,21 @@ if ( post_password_required() ) { ?>
 	return; }
 
 if ( have_comments() ) : ?>
-	<h3 id="comments"><?php comments_number('No Responses', 'One Response', '% Responses');?> <?php printf('to “%s”', the_title('', '', false)); ?></h3>
-	<div class="navigation">
-		<div class="alignleft"><?php previous_comments_link() ?></div>
-		<div class="alignright"><?php next_comments_link() ?></div>
+	<h3 id="comments" class="comments__number"><?php comments_number('هیچ دیدگاه', 'یک دیدگاه', '% دیدگاه');?> <?php printf('برای “%s”', the_title('', '', false)); ?></h3>
+	<div class="comments__navigation">
+		<div class="comments__alignleft"><?php previous_comments_link() ?></div>
+		<div class="comments__alignright"><?php next_comments_link() ?></div>
 	</div>
-	<ol class="commentlist">
+	<ol class="comments__commentlist">
 		<?php
 		wp_list_comments(array(
 
 		));
 		?>
 	</ol>
-	<div class="navigation">
-		<div class="alignleft"><?php previous_comments_link() ?></div>
-		<div class="alignright"><?php next_comments_link() ?></div>
+	<div class="comments__navigation">
+		<div class="comments__alignleft"><?php previous_comments_link() ?></div>
+		<div class="comments__alignright"><?php next_comments_link() ?></div>
 	</div>
 	<?php
 	if ( ! comments_open() ) :
@@ -58,7 +58,7 @@ $args = array(
                         </p>
                             ',
 	'comment_notes_after' => '',
-	'title_reply' => '<div class="crunchify-text"> <h5>Please Post Your Comments & Reviews</h5></div>',
+	'title_reply' => '<div class="crunchify-text"> <h5>لطفا نظرات و دیدگاه های خود را بیان کنید</h5></div>',
 	'class_submit' => 'main-btn blue'
 );
 

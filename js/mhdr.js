@@ -114,11 +114,12 @@ jQuery(document).ready(function ($) {
     $(".slider-project").slick({
         autoplay : false,
         dots :true,
-        dotsClass : "slick-dots",
+        rtl:true,
+        dotsClass : "slider-project__dots",
         slidesToShow : 1,
         slidesToScroll : 1,
-        prevArrow : '.slick-prev-p',
-        nextArrow : '.slick-next-p'
+        prevArrow : '.project-slider-control__prev-p',
+        nextArrow : '.project-slider-control__next-p'
         // responsive: [
         //     {
         //         breakpoint: 576,

@@ -28,19 +28,23 @@ html{
     font-size: 62.5%;
     direction: var(--direction);
 
-    @include respond(desktop){
-        font-size: 56.25%;
-      }
-      @include respond(tab-port){
-          font-size: 56.25%;
-      }
-      @include respond(phone){
+    @include respond(phone){
         font-size: 50%;
     }
-     
-      @include respond(larg-desktop){
-          font-size: 75%;
+      @include respond(tab-port){
+          font-size: 52.25%;
       }
+      
+    @include respond(desktop){
+        font-size: 54.25%;
+      }
+     
+      @include respond(large-desktop){
+          font-size: 62.5%;
+      }
+      @include respond(xlarge-desktop){
+        font-size: 65%;
+    }
 }
 body{
     font-family: 'mhdr', tahoma;

@@ -8,19 +8,23 @@
 	</div>
 
 	<div class="resome">
+		<div class="resome__select" >
 		<select class="select-res">
-            <option value="what-done-i">What done i?</option>
-            <option value="what-do-i">What do i?</option>
-			<option value="who-am-i">Who am i?</option>
-			<option value="where-am-i">Where am i?</option>
+            <option value="what-done-i">چیکار کردم؟</option>
+            <option value="what-do-i">چی بلدم؟</option>
+			<option value="who-am-i">کی هستم؟</option>
+			<option value="where-am-i">کجا هستم؟</option>
 		</select>
-        <div id="what-do-i" class="col-md-12 col-sm-12 resome-content ">
-
+		</div>
+        <div  class="col-md-12 col-sm-12">
+			<div id="what-do-i" class="resome-content">
         <div class="container">
+			<div class="row">
 				<div id="" class="col-md-6 col-sm-12 resome-content-left ">
-					<img src="<?php echo get_template_directory_uri().'/images/double-like.png' ?>" class="img-responsive" alt=""></div>
+					<img src="<?php echo get_template_directory_uri().'/images/double-like.png' ?>" class="img-responsive" alt="">
+				</div>
 				<div class="col-md-6 col-sm-12 resome-content-right ">
-					<div class="title-resome"><h3>What did i done?</h3></div>
+					<div class="title-resome"><h3>چی بلدم؟</h3></div>
 					<div class="resome-text">
                         <?php
                         $capability_infos = mhdr_get_option('mhd_capability_setting');
@@ -35,28 +39,34 @@
 
 					</div>
 				</div>
-			</div>
-
-		</div>
-
-        <div id="who-am-i" class="col-md-12 col-sm-12 resome-content">
-			<div class="container">
-				<div class="col-md-6 col-sm-12 resome-content-left ">
-					<?php
-					$introduce = mhdr_get_option('general_introduce_setting');
-					?>
-                    <img class="img-responsive" src="<?php echo $introduce[0]['mhd_intro_detail_img']?>" alt=""></div>
-				<div class="col-md-6 col-sm-12 resome-content-right ">
-					<div class="title-resome"><h3>Who am i?</h3></div>
-					<div class="resome-text">
-						<p ><?php echo $introduce[0]['mhd_introduce_desc_details']?></p>
-					</div>
 				</div>
 			</div>
 
 		</div>
+		</div>
+        <div id="who-am-i" class="col-md-12 col-sm-12 resome-content">
+			<div class="container">
+				<div class="row">
+				<?php
+					$introduce = mhdr_get_option('general_introduce_setting');
+					?>
+				<div class="col-md-6 col-sm-12 resome-content-right ">
+					<div class="title-resome"><h3>کی هستم؟</h3></div>
+					<div class="resome-text">
+						<p ><?php echo $introduce[0]['mhd_introduce_desc_details']?></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-12 resome-content-left ">
+					
+                    <img class="img-responsive" src="<?php echo $introduce[0]['mhd_intro_detail_img']?>" alt="">
+				</div>
+				
+						</div>
+			</div>
 
-		<div id="what-done-i" class="col-md-12 col-sm-12 resome-content resome-block ">
+		</div>
+
+		<div id="what-done-i" class=" resome-content resome-block ">
 			<div class="container">
                 <div class="slider-project">
                 <?php
@@ -67,9 +77,12 @@
 				?>
 
                 <div class="slid-project">
-                    <div class="col-md-6 col-sm-12 resome-content-left ">
-                        <img class="img-responsive" src="<?php the_post_thumbnail_url(); ?>" alt=""></div>
+					<div class="col-md-12 col-sm-12">
+				<div class="container">
+					<div class="row" >
+					
                     <div class="col-md-6 col-sm-12 resome-content-right ">
+						<div class="resome-content-right">
                         <div class="title-resome"><h3><?php the_title() ?></h3></div>
                         <div class="resome-text">
                             <p class="excerpt"><?php the_excerpt(); ?></p>
@@ -83,24 +96,41 @@
                         <div class="view-live">
                             <a class="btn-live" href="<?php echo $version = ShowProject::demo_path( get_the_ID() );?>">Live view</a>
                         </div>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-12  ">
+					<div class="resome-content-left" >
+                    <div class="img-light">    
+					<img class="img-responsive" src="<?php the_post_thumbnail_url(); ?>" alt="">
+					</div>
+						</div>
                     </div>
-                </div>
 
+                </div>
+				</div>
+				</div>
+				</div>
 				<?php endwhile;
 
 					?>
 				<?php else: echo 'there is not any project exist...'; ?>
 				<?php endif;
 				?>
-			</div>
+			
 
             </div>
-
+									</div>
             <div class="project-slider-control">
-
-                <a class="slick-prev-p" href="#"><i class="fa fa-arrow-circle-left"></i></a>
-                <a class="slick-next-p" href="#"><i class="fa fa-arrow-circle-right"></i> </a>
-
+                <a class="project-slider-control__prev-p" href="#">
+				<svg class="project-slider-control__slider-arrow">
+                    <use xlink:href="<?php echo get_template_directory_uri(  )?>/images/sprite.svg#icon-arrow-circle-left" ></use>
+                </svg>
+				</a>
+                <a class="project-slider-control__next-p" href="#">
+				<svg class="project-slider-control__slider-arrow">
+                    <use xlink:href="<?php echo get_template_directory_uri(  )?>/images/sprite.svg#icon-arrow-circle-right" ></use>
+                </svg>  	
+			</a>
             </div>
 
 
@@ -108,21 +138,24 @@
 
 		<div id="where-am-i" class="col-md-12 col-sm-12 resome-content">
 			<div class="container">
-				<div class="col-md-6 col-sm-12 resome-content-left ">
-<!--                    <img class="img-responsive" src="--><?php //echo get_template_directory_uri().'/images/show-left-side-blue.png' ?><!--" alt="">-->
-                    <?php
+				<div class="row">
+				<?php
                     $contact_info = mhdr_get_option('mhd_contact_setting');
                     ?>
+				<div class="col-md-6 col-sm-12 resome-content-right ">
+					<div class="title-resome"><h3>کجا هستم؟</h3></div>
+					<div class="resome-text">
+						<p><?php echo $contact_info[0]['mhd_address']; ?></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-12 resome-content-left ">
+                   
                     <p class="map-contact">
                         <iframe src="<?php echo $contact_info[0]['mhd_map_location']; ?> " width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </p>
 
                 </div>
-				<div class="col-md-6 col-sm-12 resome-content-right ">
-					<div class="title-resome"><h3>Where am i?</h3></div>
-					<div class="resome-text">
-						<p><?php echo $contact_info[0]['mhd_address']; ?></p>
-					</div>
+				
 				</div>
 			</div>
 
@@ -130,29 +163,31 @@
 
 		<div class="col-md-12 col-sm-12 resome-tabs">
 			<div class="container">
+				<div class="row">
                 <div id="what-done-i" class="col-md-3 col-sm-3 resome-tab active ">
 					<i class="fa fa-file-code"></i>
-					<span>what done i?</span>
+					<span>چیکار کردم؟</span>
 
 				</div>
                 <div id="what-do-i" class="col-md-3 col-sm-3 resome-tab">
 
                     <i class="fa fa-magic"></i>
-                    <span>what do i?</span>
+                    <span>چی بلدم؟</span>
 
                 </div>
 				<div id="who-am-i" class="col-md-3 col-sm-3 resome-tab">
 					<i class="fa fa-user"></i>
-					<span>who am i?</span>
+					<span>کی هستم؟</span>
 
 				</div>
 
 				<div id="where-am-i" class="col-md-3 col-sm-3 resome-tab">
 
 					<i class="fa fa-map-marked"></i>
-					<span>where am i?</span>
+					<span>کجا هستم؟</span>
 
 				</div>
+									</div>
 			</div>
 
 		</div>
