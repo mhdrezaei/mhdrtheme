@@ -350,48 +350,6 @@ svg {
 }
 
 
-/*===================== Portfolio Page ====================*/
-
-.all-portfolio .portfolio-s{
-    padding: 10px;
-}
-.all-portfolio .portfolio-grid .portfolio-post{
-    background-color: #fff;
-    box-shadow: 0 0 8px 7px #ececec;
-    text-align: center;
-    padding-bottom: 15px;
-}
-.all-portfolio .portfolio-grid .portfolio-post a.link-portfilio{
-    text-decoration: none;
-}
-.all-portfolio .portfolio-grid .portfolio-post a.link-portfilio i {
-    font-size: 30px;
-    position: absolute;
-    background-color: #ffffff;
-    border-radius: 50%;
-    padding: 10px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%) scale(0);
-    transition: all .2s ease-in-out;
-}
-.all-portfolio .portfolio-grid .portfolio-post:hover a.link-portfilio img{
-    opacity: 0.2;
-}
-.all-portfolio .portfolio-grid .portfolio-post:hover a.link-portfilio i{
-    transform: translate(-50%,-50%) scale(1);
-}
-.all-portfolio .portfolio-grid .portfolio-post a h2{
-    font-size:40px;
-    color: #012b64;
-}
-.all-portfolio .portfolio-grid .portfolio-post a p{
-    font-size: 18px;
-    color: #888888;
-    margin: 15px;
-}
-
-
 /*=============== Single Portfolio ================*/
 .single-portfilio .portfolio-description .portfolio-content{
     padding: 10px;

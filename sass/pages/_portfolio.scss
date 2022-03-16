@@ -1,0 +1,48 @@
+.portfolio{
+    margin-top: 10rem;
+
+
+    &__post{
+        position: relative;
+        background-color: #fff;
+        box-shadow: 0 0 8px 7px #ececec;
+        text-align: center;
+        padding-bottom: 1.5rem;
+
+        &:hover .portfolio__link img{
+            opacity: 0.2;
+        }
+        &:hover .portfolio__link i{
+            transform: translate(-50%,-50%) scale(1);
+        }
+    }
+
+    &__link{
+        text-decoration: none;
+        
+
+        & i{
+            font-size: 3rem;
+            position: absolute;
+            background-color: var(--accent-color);
+            color: var(--white-color);
+            border-radius: 50%;
+            padding: 1rem;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%) scale(0);
+            transition: all .2s ease-in-out;
+        }
+        & h2 {
+            font-size:4rem;
+            color: #012b64;
+        }
+        
+        & p {
+            font-size: 1.8rem;
+            color: #888888;
+            margin: 1.5rem;
+        }
+
+    }
+}
