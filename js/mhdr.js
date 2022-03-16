@@ -80,10 +80,11 @@ jQuery(document).ready(function ($) {
         });
     });
 
-        $(".portfolio-slider").slick({
+        $(".single-portfilio__slider").slick({
             autoplay : false,
             dots :true,
-            dotsClass : "slick-dots",
+            rtl:true,
+            dotsClass : "slider-project__dots",
             slidesToShow : 1,
             slidesToScroll : 1,
             variableWidth: true,

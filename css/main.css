@@ -1463,7 +1463,7 @@ ul.children li.odd {
     padding: 3rem;
     margin: 2rem 0 0;
     z-index: 1;
-    display: inline-block;
+    display: block;
     transition: all 0.5s; }
     .slider-project__dots li {
       position: relative;
@@ -1941,6 +1941,143 @@ ul.children li.odd {
       color: #757575; }
       .single__rel-post p a {
         color: #888888; }
+
+.single-portfilio-main-content {
+  margin-top: 10rem; }
+
+.single-portfilio__content {
+  padding: 1rem;
+  box-shadow: 0 0 8px 5px #ececec;
+  background-color: #fff; }
+  .single-portfilio__content p {
+    font-size: 1.6rem;
+    word-break: break-all;
+    line-height: 2.7rem; }
+
+.single-portfilio__slider {
+  padding: 10px;
+  box-shadow: 0 0 8px 5px #ececec;
+  background-image: linear-gradient(135deg, #012b64, #00ffe7); }
+
+.single-portfilio__info {
+  padding: 1rem;
+  box-shadow: 0 0 8px 5px #ececec;
+  background-image: linear-gradient(270deg, white, #ffffff00);
+  margin-top: 1rem; }
+
+.single-portfilio__list {
+  list-style: none;
+  width: 60rem;
+  max-width: 90%; }
+
+.single-portfilio__item {
+  display: block;
+  clear: both;
+  counter-increment: list;
+  padding-bottom: 4rem;
+  font-size: 1.1rem;
+  line-height: 1.375;
+  position: relative; }
+  .single-portfilio__item::before {
+    content: counter(list);
+    width: 5rem;
+    height: 5rem;
+    float: left;
+    margin: 0 1.5rem 0.75rem 0;
+    color: #fdfdfd;
+    background: #012d66 linear-gradient(to bottom right, #012e66 12%, #01fee7);
+    text-shadow: 0 0 2px #015c82;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    shape-outside: ellipse();
+    z-index: 1; }
+  .single-portfilio__item::after {
+    width: 2.5rem;
+    height: 2.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    background: #012e66;
+    z-index: -1;
+    border-top-left-radius: 3px; }
+
+.single-portfilio__headline {
+  padding: 0rem 0 0 0;
+  margin: 0 0 1rem 0; }
+
+.single-portfilio__view-live {
+  margin: 5rem auto;
+  text-align: center; }
+  .single-portfilio__view-live .btn-live {
+    font-size: 22px;
+    text-decoration: none;
+    padding: 15px 40px;
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 20px;
+    box-shadow: 0px 0 9px 0px var(--secondary-color);
+    transition: all 0.2s ease-in-out; }
+    .single-portfilio__view-live .btn-live:hover {
+      background-color: var(--primary-color);
+      color: var(--white-color);
+      border: 2px solid var(--secondary-color);
+      box-shadow: 0px 0 9px 0px var(--primary-color); }
+
+.single-portfilio__cat-tag {
+  margin-top: 50px;
+  padding: 10px;
+  box-shadow: 0 0 8px 5px var(--grey-light-1);
+  background-color: var(--white-color); }
+
+.single-portfilio__cat, .single-portfilio__tag {
+  margin-top: 10px; }
+  .single-portfilio__cat p i, .single-portfilio__tag p i {
+    font-size: 1.4rem;
+    color: #012b64;
+    border: none;
+    margin-right: 5px; }
+  .single-portfilio__cat p a, .single-portfilio__tag p a {
+    padding: 6px 12px;
+    border-radius: 2px;
+    display: inline-block;
+    margin: 0 4px 10px 0;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 500;
+    border: 1px solid rgba(167, 167, 167, 0.16); }
+    .single-portfilio__cat p a:hover, .single-portfilio__tag p a:hover {
+      color: var(--white-color);
+      background-color: var(--primary-color); }
+
+.single-portfilio__version {
+  margin-top: 15px;
+  padding: 10px;
+  box-shadow: 0 0 8px 5px var(--grey-light-1);
+  background-color: var(--white-color); }
+  .single-portfilio__version p {
+    color: var(--primary-color); }
+
+.single-portfilio__technologies {
+  margin-top: 1.5rem;
+  padding: 10px;
+  box-shadow: 0 0 8px 5px var(--grey-light-1);
+  background-color: var(--white-color); }
+  .single-portfilio__technologies p span {
+    padding: 0.6rem 1.2rem;
+    border-radius: 2px;
+    display: inline-block;
+    margin: 0 .4rem 1rem 0;
+    font-size: 1.4rem;
+    text-decoration: none;
+    font-weight: 500;
+    border: 1px solid rgba(167, 167, 167, 0.16); }
+    .single-portfilio__technologies p span:hover {
+      color: var(--white-color);
+      background-color: var(--primary-color); }
 
 .portfolio {
   margin-top: 10rem; }

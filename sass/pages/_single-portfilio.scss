@@ -1,0 +1,171 @@
+.single-portfilio-main-content{
+    margin-top: 10rem;
+}
+.single-portfilio{
+
+    &__content{
+        padding: 1rem;
+        box-shadow: 0 0 8px 5px #ececec ;
+        background-color: #fff;
+
+        &  p{
+            font-size: 1.6rem;
+            word-break: break-all;
+            line-height: 2.7rem;
+        }
+        }
+
+    &__slider{
+        padding: 10px;
+        box-shadow: 0 0 8px 5px #ececec ;
+        background-image: linear-gradient(135deg,#012b64,#00ffe7);
+    }
+    
+    
+    &__info{
+        padding: 1rem;
+        box-shadow: 0 0 8px 5px #ececec ;
+        background-image: linear-gradient(270deg, white, #ffffff00);
+        margin-top:1rem;
+    }
+
+    &__list{
+        list-style: none;
+        width: 60rem;
+        max-width: 90%;
+    }
+    &__item{
+        display: block;
+        clear: both;
+        counter-increment: list;
+        padding-bottom: 4rem;
+        font-size: 1.1rem;
+        line-height: 1.375;
+        position: relative;
+
+        &::before{
+            content: counter(list);
+            width: 5rem;
+            height: 5rem;
+            float: left;
+            margin: 0 1.5rem 0.75rem 0;
+            color: #fdfdfd;
+            background: #012d66 linear-gradient(to bottom right, #012e66 12%, #01fee7);
+            text-shadow: 0 0 2px #015c82;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            shape-outside: ellipse();
+            z-index: 1;
+        }
+
+        &::after{
+            width: 2.5rem;
+            height: 2.5rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "";
+            background: #012e66;
+            z-index: -1;
+            border-top-left-radius: 3px;
+        }
+    }
+    &__headline{
+        padding: 0rem 0 0 0;
+        margin: 0 0 1rem 0;
+    }
+
+    &__view-live{
+        margin: 5rem auto;
+        text-align: center;
+
+        & .btn-live{
+            font-size: 22px;
+            text-decoration: none;
+            padding: 15px 40px;
+            background-color: var(--white-color);
+            color: var(--primary-color);
+            border: 1px solid var(--accent-color);
+            border-radius: 20px;
+            box-shadow: 0px 0 9px 0px var(--secondary-color);
+            transition: all 0.2s ease-in-out;
+
+            &:hover{
+                background-color: var(--primary-color);
+                color: var(--white-color);
+                border: 2px solid var(--secondary-color);
+                box-shadow: 0px 0 9px 0px var(--primary-color);
+            }
+        }
+    }
+
+    &__cat-tag{
+        margin-top: 50px;
+        padding: 10px;
+        box-shadow: 0 0 8px 5px var(--grey-light-1);
+        background-color: var(--white-color);
+    }
+     &__cat , &__tag{
+        margin-top:10px;
+
+        & p i{
+            font-size: 1.4rem;
+            color: #012b64;
+            border :none;
+            margin-right:5px;
+        }
+
+        & p a{
+            padding: 6px 12px;
+            border-radius: 2px;
+            display: inline-block;
+            margin: 0 4px 10px 0;
+            font-size: 14px;
+            text-decoration: none;
+            font-weight: 500;
+            border: 1px solid rgba(167,167,167,.16);
+
+            &:hover{
+                color: var(--white-color);
+                background-color: var(--primary-color);
+            }
+        }
+     }
+
+     &__version{
+        margin-top: 15px;
+        padding: 10px;
+        box-shadow: 0 0 8px 5px var(--grey-light-1);
+        background-color: var(--white-color);
+
+        & p {
+            color: var(--primary-color);
+        }
+    }
+
+    &__technologies{
+        margin-top: 1.5rem;
+        padding: 10px;
+        box-shadow: 0 0 8px 5px var(--grey-light-1) ;
+        background-color: var(--white-color);
+
+        & p span{
+            padding: 0.6rem 1.2rem;
+            border-radius: 2px;
+            display: inline-block;
+            margin: 0 .4rem 1rem 0;
+            font-size: 1.4rem;
+            text-decoration: none;
+            font-weight: 500;
+            border: 1px solid rgba(167,167,167,.16);
+
+            &:hover{
+                color: var(--white-color);
+                background-color: var(--primary-color);
+            }
+        }
+    }
+
+}
