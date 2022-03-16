@@ -205,6 +205,54 @@ jQuery(document).ready(function ($) {
     });
 
 
+    $(document).on('keyup', '#search_input' , function (e) {
+        e.preventDefault();
+
+        var $this = $(this);
+        var $keyword = $this.val();
+        var $result = $(document).find('#result');
+        var request, timeout;
+        var processing=false;
+        if($this.val().length === 0){
+            $result.css('opacity','0');
+        }
+        timeout = setTimeout(function(){ 
+            if (!processing) {
+                processing=true;
+                request =  $.ajax({
+            url: data.ajax_url,
+            type: 'post',
+            data: {
+                action: 'data_fetch', keyword:$keyword
+            }, beforeSend: function(xhr){
+                // what to do just after the form has been submitted
+                $result.html(" ");
+               var $spiner = "<img id='preloader' src="+ data.spiner +" />";
+                $result.append($spiner).css('opacity','1');
+            },
+            success: function ( searchResult ) {
+                processing=false;
+                $result.append(searchResult);
+
+            }
+            ,
+            complete: function(){
+                // what to do after a comment has been added
+                $("#preloader").remove();
+
+            }
+            });
+        }else{
+            clearTimeout(timeout);
+        }
+
+         } , 3000);
+        
+        // alert(result);
+      
+        
+    });
+
     $(document).on('submit', '#contact_form', function (e) {
         e.preventDefault();
         var $this = $(this);

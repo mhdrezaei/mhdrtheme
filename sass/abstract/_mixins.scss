@@ -13,8 +13,11 @@
         @media (min-width : 991px) and (max-width : 1199px) { @content}
             }
     @if $breakpoint == xlarge-desktop {
-        @media (min-width : 1200px){ @content}
+        @media (min-width : 1200px) and (max-width : 1399px){ @content}
             }    
+            @if $breakpoint == xxlarge-desktop {
+                @media (min-width : 1400px){ @content}
+                    }    
 }
 
 

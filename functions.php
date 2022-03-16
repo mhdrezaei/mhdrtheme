@@ -107,7 +107,8 @@ function mhd_load_assets(){
 		wp_register_script('mhdr',get_template_directory_uri().'/js/mhdr.js','jquery',null,true);
 		wp_enqueue_script('mhdr');
 		wp_localize_script( 'mhdr', 'data', array(
-			'ajax_url'    => admin_url( 'admin-ajax.php' )
+			'ajax_url'    => admin_url( 'admin-ajax.php' ),
+			'spiner' =>  get_template_directory_uri( ).'/images/preloader-small.gif'
 		));
 	}
 	if (!is_home()){
@@ -127,11 +128,21 @@ function get_breadcrumb() {
 	if ( is_category() || is_single() ) {
 		echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;";
 		the_category( ' &bull; ' );
+		
 		if ( is_single() ) {
 			echo " &nbsp;&nbsp;&#187;&nbsp;&nbsp; ";
 			the_title();
 		}
-	} elseif ( is_page() ) {
+		
+
+	}elseif ( is_tag() ) {
+		echo " &nbsp;&nbsp;&#187;&nbsp;&nbsp; ";
+		echo '<i class="fas fa-tags"></i>';
+		echo " &nbsp;&nbsp;&#187;&nbsp;&nbsp; ";
+		echo single_tag_title('', false);
+	}
+	
+	elseif ( is_page() ) {
 		echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;";
 		echo the_title();
 
@@ -143,6 +154,7 @@ function get_breadcrumb() {
 		echo '</em>"';
 	}
 }
+
 
 // ********************* post view **************************
 function mhd_update_post_view($post_id){

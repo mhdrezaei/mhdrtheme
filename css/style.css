@@ -338,50 +338,6 @@ svg {
     color: #434343;
     direction: ltr;
 }
-/*----------- see more link -------------*/
-
-/*!*------------------- buttons ----------------*/
-.main-btn{
-    text-decoration: none;
-    position: relative;
-    color: #022f68;
-    padding: 7px 30px;
-    border-radius: 30px;
-    transition: background-color 0.5s, box-shadow 0.5s, color 0.5s;
-}
-
-.main-btn.blue{
-    box-shadow: inset 0 0 1em rgba(0, 170, 170, 0.5), 0 0 1em rgba(0, 170, 170, 0.5);
-    border: #0dd solid 2px;
-}
-.main-btn.blue:hover {
-    background-color: #0dd;
-    box-shadow: inset 0 0 0 rgba(0, 170, 170, 0.5), 0 0 1.5em rgba(0, 170, 170, 0.7);
-    border: 2px solid #022f68;
-}
-
-.fuller-button.red {
-    box-shadow: inset 0 0 1em rgba(251, 81, 81, 0.4), 0 0 1em rgba(251, 81, 81, 0.4);
-    border: #fb5454 solid 2px;
-}
-.fuller-button.red:hover {
-    background-color: #fb5454;
-    box-shadow: inset 0 0 0 rgba(251, 81, 81, 0.4), 0 0 1.5em rgba(251, 81, 81, 0.6);
-}
-.fuller-button.white {
-    box-shadow: inset 0 0 0.8em rgba(255, 255, 255, 0.3), 0 0 0.8em rgba(255, 255, 255, 0.3);
-    border: #fff solid 2px;
-}
-.fuller-button.white:hover {
-    color: rgba(0, 0, 0, 0.8);
-    background-color: #fff;
-    box-shadow: inset 0 0 0 rgba(255, 255, 255, 0.3), 0 0 1.2em rgba(255, 255, 255, 0.5);
-}
-
-
-/**!*------------------- buttons ----------------*!*/
-/* ======== sidebar blog===========*/
-
 
 /*=================== Contact Us ======================*/
 .header-contact {
@@ -392,69 +348,6 @@ svg {
     margin: 0;
     padding: 0;
 }
-.main-contact{
-    width: 100%;
-}
-.main-contact .main-contact-page{
-    padding: 0;
-}
-.main-contact .main-contact-page .form-contact{}
-.main-contact .main-contact-page .form-contact h2{
-    font-size: 50px;
-    color: #0c6faa;
-    text-align: center;
-    margin-top: 50px;
-    padding: 20px 0 10px 0;
-}
-.main-contact .main-contact-page .form-contact hr{
-    width: 15%;
-    background-color: #00ffe7;
-    border: 3px solid #00ffe7;
-    border-radius: 30px;
-    margin-bottom: 0;
-}
-.main-contact .main-contact-page .form-contact .form-contact-sec{
-    padding: 60px 50px;
-}
-
-.main-contact .main-contact-page .info-contact {
-    background-color: transparent;
-    background-image: linear-gradient(4deg,#012b64,#1389c6);
-    padding: 30px 40px 140px 50px;
-}
-.main-contact .main-contact-page .info-contact p{
-    font-size: 36px;
-    color: #ffffff;
-    margin-top: 20px;
-}
-.main-contact .main-contact-page .info-contact p:hover i{
-    background-color: #012b64;
-    color: #00ffe7 ;
-}
-.main-contact .main-contact-page .info-contact p:hover span{
-    color: #00ffe7;
-
-}
-.main-contact .main-contact-page .info-contact p iframe{
-    border-radius: 10px;
-}
-.main-contact .main-contact-page .info-contact p i{
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 5px;
-    margin-right: 10px;
-    color: #012b64;
-}
-.main-contact .main-contact-page .info-contact p span{
-    font-size: 30px;
-}
-
-/*=============== Single Page ========================*/
-
-
-
-
-
 
 
 /*===================== Portfolio Page ====================*/

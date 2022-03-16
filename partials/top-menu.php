@@ -60,7 +60,8 @@
 			?>
               
               <form class="d-flex navbar__form">
-                <input class="navbar__input" name="s" type="text" placeholder="جستجو..." aria-label="جستجو...">
+                <input id="search_input" class="navbar__input" name="s" type="text" autocomplete="off" placeholder="جستجو..." aria-label="جستجو...">
+				<p id="result" class="navbar__result" ></p>
                 <button class="navbar__btn" type="submit">
 				<svg class="navbar__svg--search">
 					<use xlink:href="<?php echo get_template_directory_uri() ?>/images/sprite.svg#icon-search"></use>

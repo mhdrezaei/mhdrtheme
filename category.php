@@ -8,9 +8,10 @@ get_template_part( '/partials/head-pages' );
 
 	</header>
 
-	<div class="main-content">
+	<div class="category_main-content">
 		<div class="container">
 			<div class="col-md-12 col-sm-12">
+				<div class="row">
 				<div class="col-md-8 col-sm-12 main-side">
 					<?php
 					$cat_id = get_query_var('cat');
@@ -29,22 +30,37 @@ get_template_part( '/partials/head-pages' );
 
 							?>
 
-							<div class="col-md-12 col-sm-12 post-blog">
-								<div class="col-md-4 col-sm-12 img-post-blog">
-									<a class="thumbnail-post" href="<?php the_permalink(); ?>">
-										<img src="<?php the_post_thumbnail_url(); ?>" class="img-responsive" alt="">
-										<i class="fa fa-link"></i>
-									</a>
-								</div>
-								<div class="col-md-8 col-sm-12 post-info">
-									<div class="title-post"><h2><?php the_title() ?></h2></div>
-									<div class="metadata-post"><span><i class="fa fa-calendar-times"></i> <?php the_date(); ?> </span>
-									</div>
-									<div class="excerpt-post"><p><?php the_excerpt(); ?></p></div>
-									<div class="see-more"><a class="see-more-link blue" href="<?php the_permalink(); ?>">Read more</a></div>
-								</div>
+<div class="col-md-12 col-sm-12 ">
+                        <div class="blog__post" > 
+                            <div class="col-md-12 col-sm-12 ">
+                                <div class="blog__post--img">
+                                    <a class="blog__post--thumbnail" href="<?php the_permalink(); ?>">
+                                        <img src="<?php the_post_thumbnail_url(); ?>" class="img-responsive" alt="">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                        <div class="col-md-12 col-sm-12 ">
+                            <div class="blog__post--info">
+                                <div class="blog__post--title"><h2><?php the_title() ?></h2></div>
+                                <div class="blog__post--excerpt"><p><?php the_excerpt(); ?></p></div>
+                                <div class="blog__see-more">
+                                <a class="btn btn-blue-accent" href="<?php the_permalink(); ?>">ادامه مطلب</a>
+                                </div>
+                            </div>
+                            
+                                <div class="blog__post--metadata">
+                                            <div><i class="fa fa-calendar-times"></i> <?php the_date(); ?>&nbsp; </div>
+                                            <div class="top-single-author"><i class="fa fa-user"></i> <?php the_author(); ?>&nbsp;</div>
+                                            <div><i class="fa fa-comment"></i> <?php comments_number(); ?> </div>
+                                            <div><i class="fa fa-eye"></i>&nbsp;<?php echo mhd_get_post_view(get_the_id()) ?> </div>                            
+                                        </div>
 
-							</div>
+
+                            </div>
+                        </div>
+                    </div>
 
 							<?php
 						}
@@ -67,6 +83,7 @@ get_template_part( '/partials/head-pages' );
 
 				</div>
 				<?php get_sidebar(); ?>
+				</div>
 
 			</div>
 		</div>

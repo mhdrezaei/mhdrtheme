@@ -1,6 +1,6 @@
 <div class="head__page">
 	<div class="head__page--title-page">
-		<h1><?php the_title(); ?></h1>
+	<?php get_template_part('partials/page-title'); ?>
 	</div>
 	<div class="head__page--breadcrumbs ">
 
