@@ -1,0 +1,33 @@
+.about{
+
+    &__main{
+        margin-top: 10rem;
+    }
+
+    &__content {
+        box-shadow: 1px 1px 5px 5px #eee;
+        padding: 15px;
+        line-height: 3.2rem;
+        font-size: 1.7rem;
+        // word-break: break-all;
+        margin-top: 2rem;
+
+        & h2{
+            display: inline-block;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin: 1rem 0.5rem;
+            padding: .5rem;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+        }
+    }
+
+    &__cap{
+
+        & .progress{
+
+            background: var(--primary-color);
+        }
+    }
+}

@@ -1349,6 +1349,27 @@ ul.children li.odd {
   border-style: none;
   border-radius: 3px; }
 
+.about__main {
+  margin-top: 10rem; }
+
+.about__content {
+  box-shadow: 1px 1px 5px 5px #eee;
+  padding: 15px;
+  line-height: 3.2rem;
+  font-size: 1.7rem;
+  margin-top: 2rem; }
+  .about__content h2 {
+    display: inline-block;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 1rem 0.5rem;
+    padding: .5rem;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--secondary-color); }
+
+.about__cap .progress {
+  background: var(--primary-color); }
+
 .introduce__text {
   position: relative; }
 
