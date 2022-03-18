@@ -178,7 +178,7 @@ jQuery(function($){
                         }
                     }else{
                         // if no comments yet
-                        addedCommentHTML = '<ol class="comment-list" style="padding-inline-start:0;margin: 10px;">' + addedCommentHTML + '</ol>';
+                        addedCommentHTML = '<ol class="author-comments__list" style="padding-inline-start:0;margin: 10px;">' + addedCommentHTML + '</ol>';
                         respond.before( $(addedCommentHTML) );
                         Swal.fire({
                             position: 'center',

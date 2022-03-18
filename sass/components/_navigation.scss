@@ -3,13 +3,25 @@
     &__check{
         display: none;
 
-        
-    
     }
     &__check:checked ~ &__background{
-        transform: scale(90);
 
-
+        @include respond(phone){
+            transform: scale(70);
+        }
+        @include respond(tab-port){
+            transform: scale(80);
+        }
+        @include respond(desktop){
+            transform: scale(90);
+        }
+        @include respond(large-desktop){
+            transform: scale(120);
+        }
+        @include respond(xlarge-desktop){
+            transform: scale(150);
+        }
+        
     }
     &__check:checked ~ &__list,
     &__check:checked ~ .menu-navigation-container .menu{

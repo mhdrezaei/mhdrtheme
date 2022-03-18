@@ -81,7 +81,7 @@
 				<div class="container">
 					<div class="row" >
 					
-                    <div class="col-md-6 col-sm-12 resome-content-right ">
+                    <div class="col-md-6 col-sm-12">
 						<div class="resome-content-right">
                         <div class="title-resome"><h3><?php the_title() ?></h3></div>
                         <div class="resome-text">

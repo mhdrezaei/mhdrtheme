@@ -53,26 +53,27 @@ jQuery(document).ready(function ($) {
     });
 
     $("#last-blog-post").each(function () {
-        $("#post").slick({
-                autoplay : false,
-                dots :true,
-            dotsClass : "slick-dots",
-                slidesToShow : 2,
-                slidesToScroll : 1,
+        $("#slider").slick({
+            autoplay : false,
+            rtl:true,
+            dots :true,
+            dotsClass : "slider-project__dots",
+            slidesToShow : 3,
+            slidesToScroll : 1,
             prevArrow : '.slick-prev',
             nextArrow : '.slick-next',
             responsive: [
                 {
-                    breakpoint: 600,
+                    breakpoint: 768,
                     settings: {
                         slidesToShow: 2,
-                        slidesToScroll: 2
+                        slidesToScroll: 1
                     }
                 },
                 {
-                    breakpoint: 480,
+                    breakpoint: 576,
                     settings: {
-                        slidesToShow: 2,
+                        slidesToShow: 1,
                         slidesToScroll: 1
                     }
                 }
@@ -193,7 +194,7 @@ jQuery(document).ready(function ($) {
                     post_id: $post_id
                 },
                 success: function (response) {
-                    $this.find('i').text(response.count);
+                    $this.html(`<i class="fa fa-heart" aria-hidden="true"></i>` + response.count);
                     $this.data('liked', 1);
                     Swal.fire("thank you!!!", "you liked this post!", "success");
 
@@ -206,53 +207,53 @@ jQuery(document).ready(function ($) {
     });
 
 
-    $(document).on('keyup', '#search_input' , function (e) {
-        e.preventDefault();
+    // $(document).on('keyup', '#search_input' , function (e) {
+    //     e.preventDefault();
 
-        var $this = $(this);
-        var $keyword = $this.val();
-        var $result = $(document).find('#result');
-        var request, timeout;
-        var processing=false;
-        if($this.val().length === 0){
-            $result.css('opacity','0');
-        }
-        timeout = setTimeout(function(){ 
-            if (!processing) {
-                processing=true;
-                request =  $.ajax({
-            url: data.ajax_url,
-            type: 'post',
-            data: {
-                action: 'data_fetch', keyword:$keyword
-            }, beforeSend: function(xhr){
-                // what to do just after the form has been submitted
-                $result.html(" ");
-               var $spiner = "<img id='preloader' src="+ data.spiner +" />";
-                $result.append($spiner).css('opacity','1');
-            },
-            success: function ( searchResult ) {
-                processing=false;
-                $result.append(searchResult);
+    //     var $this = $(this);
+    //     var $keyword = $this.val();
+    //     var $result = $(document).find('#result');
+    //     var request, timeout;
+    //     var processing=false;
+    //     if($this.val().length === 0){
+    //         $result.css('opacity','0');
+    //     }
+    //     timeout = setTimeout(function(){ 
+    //         if (!processing) {
+    //             processing=true;
+    //             request =  $.ajax({
+    //         url: data.ajax_url,
+    //         type: 'post',
+    //         data: {
+    //             action: 'data_fetch', keyword:$keyword
+    //         }, beforeSend: function(xhr){
+    //             // what to do just after the form has been submitted
+    //             $result.html(" ");
+    //            var $spiner = "<img id='preloader' src="+ data.spiner +" />";
+    //             $result.append($spiner).css('opacity','1');
+    //         },
+    //         success: function ( searchResult ) {
+    //             processing=false;
+    //             $result.append(searchResult);
 
-            }
-            ,
-            complete: function(){
-                // what to do after a comment has been added
-                $("#preloader").remove();
+    //         }
+    //         ,
+    //         complete: function(){
+    //             // what to do after a comment has been added
+    //             $("#preloader").remove();
 
-            }
-            });
-        }else{
-            clearTimeout(timeout);
-        }
+    //         }
+    //         });
+    //     }else{
+    //         clearTimeout(timeout);
+    //     }
 
-         } , 3000);
+    //      } , 3000);
         
-        // alert(result);
+    //     // alert(result);
       
         
-    });
+    // });
 
     $(document).on('submit', '#contact_form', function (e) {
         e.preventDefault();

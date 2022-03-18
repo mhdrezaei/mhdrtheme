@@ -32,9 +32,14 @@ function data_fetch(){
 	}
     $the_query = new WP_Query( array( 'posts_per_page' => -1, 's' => esc_attr( $_POST['keyword'] ), 'post_type' => 'post' ) );
     if( $the_query->have_posts() ) :
-        while( $the_query->have_posts() ): $the_query->the_post(); ?>
-            
-            <h2 class="search__founded"><a href="<?php echo esc_url( post_permalink() ); ?>"><?php the_title();?></a></h2>
+        while( $the_query->have_posts() ): $the_query->the_post(); 
+            $result = array(
+			'title'   => get_the_title(),
+			'link' => get_the_permalink()
+		);
+		wp_send_json( $result );
+		?>
+          
 
         <?php endwhile;
         wp_reset_postdata();  
@@ -172,7 +177,7 @@ function mhd_submit_ajax_comment() {
 			
 				<div class="comment-author vcard">
 					' . get_avatar( $comment, 32 ) . '
-					<cite class="fn">' . get_comment_author_link() . '</cite> <span class="says">says:</span>
+					<cite class="fn">' . get_comment_author_link() . '</cite> <span class="says">گفت:</span>
 				</div>
 				<div class="comment-metadata">
 					<a href="' . esc_url( get_comment_link( $comment->comment_ID ) ) . '">' . sprintf( '%1$s at %2$s', get_comment_date(), get_comment_time() ) . '</a>';

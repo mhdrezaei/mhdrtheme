@@ -80,27 +80,9 @@
     &__view-live{
         margin: 5rem auto;
         text-align: center;
-
-        & .btn-live{
-            font-size: 22px;
-            text-decoration: none;
-            padding: 15px 40px;
-            background-color: var(--white-color);
-            color: var(--primary-color);
-            border: 1px solid var(--accent-color);
-            border-radius: 20px;
-            box-shadow: 0px 0 9px 0px var(--secondary-color);
-            transition: all 0.2s ease-in-out;
-
-            &:hover{
-                background-color: var(--primary-color);
-                color: var(--white-color);
-                border: 2px solid var(--secondary-color);
-                box-shadow: 0px 0 9px 0px var(--primary-color);
-            }
-        }
     }
 
+    
     &__cat-tag{
         margin-top: 50px;
         padding: 10px;

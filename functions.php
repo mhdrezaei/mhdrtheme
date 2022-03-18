@@ -86,8 +86,6 @@ function mhd_load_assets(){
 		wp_enqueue_style('bootstrap-tooltip');
 		wp_register_style('slick',get_template_directory_uri().'/css/slick.css');
 		wp_enqueue_style('slick');
-		wp_register_style('all-style',get_template_directory_uri().'/css/style.css');
-		wp_enqueue_style('all-style');
 		wp_register_style('responsive',get_template_directory_uri().'/css/responsive.css');
 		wp_enqueue_style('responsive');
 		wp_register_style('main-style',get_template_directory_uri().'/css/main.css');
