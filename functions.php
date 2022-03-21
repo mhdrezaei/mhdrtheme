@@ -234,6 +234,7 @@ function wp_link_pages_args_prevnext_add($args)
 // Project Post type
 
 add_action( 'init', 'PostProjects::mhd_make_projects_post_type' );
+add_action( 'init', 'TaxonomyProject::add_project_taxonomies' );
 
 
 // Slider metabox

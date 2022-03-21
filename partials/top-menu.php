@@ -38,9 +38,11 @@
 
 			<nav class="navbar navbar-expand-lg navbar-dark">
           <div class="container-fluid">
+			  <?php $header_info = mhdr_get_option('mhd_site_logo_img'); ?>
+			  
             <a class="navbar-brand" href="#">
-				<img class="navbar__brand--logo" src="<?php echo get_template_directory_uri() ?>/images/brand-logo.png" alt="محمد رضائی">
-              <span class="navbar__brand-text">وب سایت شخصی محمد رضائی</span>
+				<img class="navbar__brand--logo" src="<?php echo ($header_info) ? $header_info : get_template_directory_uri().'/images/brand-logo.png' ?>"  alt="محمد رضائی">
+              <span class="navbar__brand-text"><?php echo mhdr_get_option('mhd_site_title'); ?></span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="تبديل التنقل">
 			<svg class="navbar__svg">

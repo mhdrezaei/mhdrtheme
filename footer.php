@@ -13,9 +13,10 @@
 					<div class="footer__about-logo">
 						
 					<h3>
+					<?php $footer_logo = mhdr_get_option('mhd_site_logo_img'); ?>
 						 <a class="footer__brand" href="#">
-							<img class="footer__brand--logo" src="<?php echo get_template_directory_uri() ?>/images/brand-logo.png" alt="محمد رضائی">
-              				<span class="footer__brand--text">وب سایت شخصی محمد رضائی</span>
+							<img class="footer__brand--logo" src="<?php echo ($footer_logo) ? $footer_logo : get_template_directory_uri().'/images/brand-logo.png' ?>" alt="محمد رضائی">
+              				<span class="footer__brand--text"><?php echo mhdr_get_option('mhd_site_title'); ?></span>
             			</a>
 					</h3>
 		</div>

@@ -44,12 +44,20 @@ function mhdr_register_theme_options_metabox() {
 	 */
 
 	$cmb_options->add_field( array(
-		'name' => __( 'Test Text', 'mhdr' ),
+		'name' => __( 'Site title', 'mhdr' ),
 		'desc' => __( 'field description (optional)', 'mhdr' ),
-		'id'   => 'test_text',
+		'id'   => 'mhd_site_title',
 		'type' => 'text',
-		'default' => 'Default Text',
+		'default' => 'وب سایت شخصی محمد رضائی',
 	) );
+	$cmb_options->add_field( array(
+		'name' => 'Select Logo',
+		'id'   => 'mhd_site_logo_img',
+		'type' => 'file',
+		'default' => get_template_directory_uri().'/images/brand-logo.png'
+		//'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+	) );
+
 
 	$cmb_options->add_field( array(
 		'name'    => __( 'Test Color Picker', 'mhdr' ),
@@ -79,6 +87,21 @@ function mhdr_register_theme_options_metabox() {
 			'remove_confirm' => esc_html__( 'Are you sure you want to remove?', 'cmb2' ), // Performs confirmation before removing group.
 		),
 	) );
+
+	$cmb_options->add_group_field( $group_slider_setting, array(
+		'name' => 'slide title',
+		'id'   => 'slider_title',
+		'type' => 'text',
+		//'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+	) );
+
+	$cmb_options->add_group_field( $group_slider_setting, array(
+		'name' => 'slider description',
+		'id'   => 'slider_description',
+		'type' => 'textarea',
+		//'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+	) );
+
 	$cmb_options->add_group_field( $group_slider_setting, array(
 		'name' => 'slide link',
 		'id'   => 'slider_img_link',

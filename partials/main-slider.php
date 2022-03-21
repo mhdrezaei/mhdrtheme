@@ -20,11 +20,11 @@ $slider_info = mhdr_get_option('slider-setting');
             
           </figure>
           <div class="slides__description">
-              <h2 class="slides__title" >چگونه از هک شدن وب سایت جلوگیری کنیم؟؟؟</h2>
+              <h2 class="slides__title" ><?php echo $slide['slider_title']; ?></h2>
               <p class="slides__summary" >
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده
+              <?php echo $slide['slider_description']; ?>
               </p>
-              <button class="btn btn-blue-accent" >مشاهده مطلب</button>
+              <a href="<?php echo $slide['slider_img_link']; ?>" class="btn btn-blue-accent" >مشاهده مطلب</a>
           </div>
 
                 </div>

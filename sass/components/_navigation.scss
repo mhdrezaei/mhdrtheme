@@ -16,9 +16,13 @@
             transform: scale(90);
         }
         @include respond(large-desktop){
-            transform: scale(120);
+            transform: scale(110);
         }
+
         @include respond(xlarge-desktop){
+            transform: scale(130);
+        }
+        @include respond(xxlarge-desktop){
             transform: scale(150);
         }
         

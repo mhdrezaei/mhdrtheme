@@ -286,6 +286,9 @@
         #recaptchafield0{
             margin: 2rem;
             text-align: center;
+            & > div{
+                display: inline-block;
+            }
 
             @include respond(phone){
                 transform: scale(0.8);

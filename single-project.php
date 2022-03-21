@@ -23,17 +23,7 @@ if ( have_posts() ):
 					</p>
 				</div>
 				<div class="single-portfilio__info">
-					<ol class="single-portfilio__list">
-						<li class="single-portfilio__item">
-							<h2 class="headline">Number one</h2><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, distinctio ad corporis, laboriosam unde provident, architecto tenetur ea odio debitis delectus explicabo eum obcaecati vitae facere iusto laborum consequuntur neque.</span>
-						</li>
-						<li class="single-portfilio__item">
-							<h2 class="single-portfilio__headline">Number two</h2><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, distinctio ad corporis, laboriosam unde provident, architecto tenetur ea odio debitis delectus explicabo eum obcaecati vitae facere iusto laborum consequuntur neque.</span>
-						</li>
-						<li class="single-portfilio__item">
-							<h2 class="single-portfilio__headline">Number three</h2><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, distinctio ad corporis, laboriosam unde provident, architecto tenetur ea odio debitis delectus explicabo eum obcaecati vitae facere iusto laborum consequuntur neque.</span>
-						</li>
-					</ol>
+					
 				</div>
 			</div>
 			</div>
