@@ -38,7 +38,7 @@ get_template_part('/partials/head-pages');
                                             </div>
                                                     <div class="single__post--like">
                                                     <span class="single__post--like-post">
-                                                    <span>do you like it?</span>&nbsp;
+                                                    <span>این مطلب رو دوست داشتی؟</span>&nbsp;
                                                     <a <?php echo isset( $_COOKIE[ 'postlike-' . get_the_ID() ] ) ? 'data-liked="1" style="color:#fc5130"' : 'data-liked="0"' ?>
                                                             href="#" data-id="<?php echo get_the_ID(); ?>" class="like-post">
                                                         <i class="fa fa-heart" aria-hidden="true"></i><?php echo count_like_post( get_the_ID() ); ?></a>

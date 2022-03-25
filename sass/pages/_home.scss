@@ -10,10 +10,26 @@
     text-align: center;
     font-size: 4rem;
     color: var(--accent-color);
+    @include respond(phone) {
+      top: 10rem;
+    }
     @include respond(tab-port) {
-      top: 20rem;
+      top: 17rem;
+    }
+    @include respond(desktop) {
+      top: 6rem;
+    }
+    @include respond(large-desktop) {
+      top: 10rem;
+    }
+    @include respond(xlarge-desktop) {
+      top: 9rem;
+    }
+    @include respond(xxlarge-desktop) {
+      top: 12rem;
     }
   }
+
   &__description {
     position: absolute;
     top: 30rem;
@@ -23,8 +39,23 @@
     line-height: 4rem;
     color: #095891;
 
+    @include respond(phone) {
+      top: 18rem;
+    }
     @include respond(tab-port) {
-      top: 32rem;
+      top: 24rem;
+    }
+    @include respond(desktop) {
+      top: 13rem;
+    }
+    @include respond(large-desktop) {
+      top: 18rem;
+    }
+    @include respond(xlarge-desktop) {
+      top: 16rem;
+    }
+    @include respond(xxlarge-desktop) {
+      top: 22rem;
     }
   }
 }
