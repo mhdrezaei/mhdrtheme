@@ -12,7 +12,7 @@ get_template_part('/partials/head-pages');
                 <div class="container">
                     <div class="row">
                         <?php
-                        get_sidebar();
+                        
                         if (have_posts()){
                         while (have_posts()) {
                         the_post();
@@ -31,7 +31,8 @@ get_template_part('/partials/head-pages');
                                                     <div><i class="fa fa-eye"></i>&nbsp;<?php echo mhd_get_post_view($id_post) ?> </div>
                                                 </div>
                                                 <div class="single__post--thumbnail">
-                                                    <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+                                                    <?php $image_id = get_post_thumbnail_id(); ?>
+                                                    <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php echo esc_attr( get_post_meta( $image_id, '_wp_attachment_image_alt', true ) ) ?>">
                                                 </div>
                                             <?php the_content(); ?>
                                             </div>
@@ -76,6 +77,8 @@ get_template_part('/partials/head-pages');
                                     </div>
                                 
                             </div>
+
+                            <?php get_sidebar();  ?>
                     </div>
                 
 

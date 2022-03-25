@@ -16,7 +16,7 @@ $slider_info = mhdr_get_option('slider-setting');
 	            ?>
                 <div class="slides"  >
                 <figure class="slides__shape" >
-            <img src="<?php echo $slide['sliderimg']; ?>" alt="person" class="slides__shape__img" >
+            <img src="<?php echo $slide['sliderimg']; ?>" alt="<?php echo $slide['slider_title']; ?>" class="slides__shape__img" >
             
           </figure>
           <div class="slides__description">

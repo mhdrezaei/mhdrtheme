@@ -101,7 +101,8 @@
 					<div class="col-md-6 col-sm-12  ">
 					<div class="resome-content-left" >
                     <div class="img-light">    
-					<img class="img-responsive" src="<?php the_post_thumbnail_url(); ?>" alt="">
+					<?php $image_id = get_post_thumbnail_id(); ?>
+					<img class="img-responsive" src="<?php the_post_thumbnail_url(); ?>" alt="<?php echo esc_attr( get_post_meta( $image_id, '_wp_attachment_image_alt', true ) ) ?>">
 					</div>
 						</div>
                     </div>

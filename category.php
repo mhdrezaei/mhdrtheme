@@ -30,12 +30,13 @@ get_template_part( '/partials/head-pages' );
 
 							?>
 
-<div class="col-md-12 col-sm-12 ">
+					<div class="col-md-12 col-sm-12 ">
                         <div class="blog__post" > 
                             <div class="col-md-12 col-sm-12 ">
                                 <div class="blog__post--img">
                                     <a class="blog__post--thumbnail" href="<?php the_permalink(); ?>">
-                                        <img src="<?php the_post_thumbnail_url(); ?>" class="img-responsive" alt="">
+									<?php $image_id = get_post_thumbnail_id(); ?>
+                                        <img src="<?php the_post_thumbnail_url(); ?>" class="img-responsive" alt="<?php echo esc_attr( get_post_meta( $image_id, '_wp_attachment_image_alt', true ) ) ?>">
                                         <i class="fa fa-link"></i>
                                     </a>
                                 </div>

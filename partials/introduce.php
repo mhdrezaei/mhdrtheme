@@ -6,6 +6,15 @@
 		<div class="col-md-12 col-sm-12">
 			<div class="introduce">
 		<div class="row">
+			<div class="col-md-6 col-sm-12 ">
+				<div class="introduce__text">
+				<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+					<path fill="#00fff369" d="M60.1,-48.8C73.3,-46.9,76.3,-23.4,65.5,-10.8C54.7,1.8,30.1,3.7,16.9,9C3.7,14.3,1.8,23,-10.1,33.1C-22,43.2,-43.9,54.5,-59.8,49.2C-75.6,43.9,-85.3,22,-82,3.3C-78.6,-15.3,-62.2,-30.6,-46.4,-32.4C-30.6,-34.3,-15.3,-22.8,4.1,-26.9C23.4,-31,46.9,-50.6,60.1,-48.8Z" transform="translate(100 100)" />
+				</svg>
+				<h2 class="introduce__title" >من کی هستم؟</h2>
+<p class="introduce__description" ><?php echo $introduce[0]['mhd_introduce_desc'] ?></p>
+			</div>
+			</div>
 			<div class="col-md-6 col-sm-12">
 				<div class="introduce__img img-light">
 			<svg class="introduce__svg" viewBox="0 0 180 220" xmlns="http://www.w3.org/2000/svg">
@@ -18,15 +27,7 @@
 				</svg>
 				</div>
 			</div>
-			<div class="col-md-6 col-sm-12 ">
-				<div class="introduce__text">
-				<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-					<path fill="#00fff369" d="M60.1,-48.8C73.3,-46.9,76.3,-23.4,65.5,-10.8C54.7,1.8,30.1,3.7,16.9,9C3.7,14.3,1.8,23,-10.1,33.1C-22,43.2,-43.9,54.5,-59.8,49.2C-75.6,43.9,-85.3,22,-82,3.3C-78.6,-15.3,-62.2,-30.6,-46.4,-32.4C-30.6,-34.3,-15.3,-22.8,4.1,-26.9C23.4,-31,46.9,-50.6,60.1,-48.8Z" transform="translate(100 100)" />
-				</svg>
-				<h2 class="introduce__title" >من کی هستم؟</h2>
-<p class="introduce__description" ><?php echo $introduce[0]['mhd_introduce_desc'] ?></p>
-			</div>
-			</div>
+			
 		</div>
 		</div>
 		</div>
