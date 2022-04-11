@@ -94,7 +94,7 @@
 	                            <?php endif; ?></p>
                         </div>
                         <div class="view-live">
-                            <a class="btn-live" href="<?php echo $version = ShowProject::demo_path( get_the_ID() );?>">Live view</a>
+                            <a class="btn-live" href="<?php echo $version = ShowProject::demo_path( get_the_ID() );?>">نمایش زنده</a>
                         </div>
 						</div>
 					</div>

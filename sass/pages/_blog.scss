@@ -11,7 +11,7 @@
         box-shadow: 0 0 0.8rem 0.8rem var(--grey-light-1);
 
         @include respond(phone){
-            margin: 0 2rem;
+            margin: 0 2rem 5rem 2rem;
         }
 
         &:hover{
@@ -70,8 +70,9 @@
         &  h2{
             font-size: 2.6rem;
             padding:1.5rem 2rem;
-            margin-top:35px;
+            margin-top:3.5rem;
             color: #0a5a95;
+            line-height: 3.5rem;
         }
 
         &--excerpt{

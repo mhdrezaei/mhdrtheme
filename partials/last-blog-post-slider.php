@@ -30,7 +30,7 @@
                             <div class="last-blog-posts__content">
                                 <a href="<?php the_permalink(); ?>">
                                 <?php $image_id = get_post_thumbnail_id(); ?>
-                                    <img src="<?php the_post_thumbnail_url(); ?>" class="img-responsive" alt="<?php echo esc_attr( get_post_meta( $image_id, '_wp_attachment_image_alt', true ) ) ?>">
+                                    <img src="<?php the_post_thumbnail_url(); ?>" class="img-fluid" alt="<?php echo esc_attr( get_post_meta( $image_id, '_wp_attachment_image_alt', true ) ) ?>">
                                     <h4><?php the_title() ?></h4>
                                     <p><i class="fa fa-calendar-times"></i> <?php the_date() ?> </p>
                                 </a>

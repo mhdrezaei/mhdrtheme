@@ -32,7 +32,7 @@ get_template_part('/partials/head-pages');
                                                 </div>
                                                 <div class="single__post--thumbnail">
                                                     <?php $image_id = get_post_thumbnail_id(); ?>
-                                                    <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php echo esc_attr( get_post_meta( $image_id, '_wp_attachment_image_alt', true ) ) ?>">
+                                                    <img class="img-fluid" src="<?php the_post_thumbnail_url(); ?>" alt="<?php echo esc_attr( get_post_meta( $image_id, '_wp_attachment_image_alt', true ) ) ?>">
                                                 </div>
                                             <?php the_content(); ?>
                                             </div>
@@ -81,7 +81,7 @@ get_template_part('/partials/head-pages');
                             <?php get_sidebar();  ?>
                     </div>
                 
-
+            <div class="container">    
                 <div class="col-md-12 col-sm-12 ">
                     <div class="single__related-posts">
                     <h3>مطالب مرتبط </h3>
@@ -95,7 +95,7 @@ get_template_part('/partials/head-pages');
                         <div class="single__related-post">
                             <div class="single__rel-post">
                                 <a href="<?php the_permalink(); ?>">
-                                    <img src="<?php the_post_thumbnail_url(); ?>" class="img-responsive">
+                                    <img src="<?php the_post_thumbnail_url(); ?>" class="img-fluid">
                                     <h4><?php the_title() ?></h4>
                                     <p><i class="fa fa-calendar-times"></i> <?php the_date() ?> </p>
                                 </a>
@@ -107,12 +107,12 @@ get_template_part('/partials/head-pages');
                     </div>
                     </div>
                 </div>
-
+            </div>
 
 
 			
            
-            
+            <div class="container">    
                 <div  class="col-md-12 col-sm-12">
                 <div class="comments">   
                 <h3>دیدگاه ها</h3>
@@ -120,7 +120,7 @@ get_template_part('/partials/head-pages');
 	                <?php comments_template(); ?>
                 </div>
                 </div>
-
+                </div>
                 <?php
 			}
 			}

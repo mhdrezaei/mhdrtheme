@@ -41,22 +41,22 @@ if ( have_posts() ):
 		<?php endif; ?>
 				</div>
 				<div class="single-portfilio__view-live">
-					<a class="btn-live" href="<?php echo $version = ShowProject::demo_path( get_the_ID() );?>">Live view</a>
+					<a class="btn-live" href="<?php echo $version = ShowProject::demo_path( get_the_ID() );?>">نمایش زنده</a>
 				</div>
 				<div class="single-portfilio__cat-tag">
 					<div class="single-portfilio__cat">
-						<p><i class="fa fa-folder"></i><a href="#">Wordpress</a><a href="#">Themes</a></p>
+						<p><i class="fa fa-folder"></i><a href="#">وردپرس</a><a href="#">قالب</a></p>
 					</div>
 					<div class="single-portfilio__tag">
-						<p><i class="fa fa-tags"></i><a href="#">Wordpress</a><a href="#">Themes</a></p>
+						<p><i class="fa fa-tags"></i><a href="#">وردپرس</a><a href="#">قالب</a></p>
 					</div>
 				</div>
                 <div class="single-portfilio__version">
-                    <p>version : <?php echo $version = ShowProject::price_project( get_the_ID() );?></p>
+                    <p>نسخه : <?php echo $version = ShowProject::price_project( get_the_ID() );?></p>
                 </div>
                 <div class="single-portfilio__technologies">
 
-                    <p>technologies :
+                    <p>تکنولوژی ها :
 	                    <?php $project_techno_images = ShowProject::technologies( get_the_ID() ); ?>
 	                    <?php if ( $project_techno_images && count( $project_techno_images ) ): ?>
 	                    <?php foreach ( $project_techno_images as $techno ): ?>

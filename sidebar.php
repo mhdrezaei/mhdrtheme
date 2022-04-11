@@ -51,7 +51,7 @@
 								<div class="sidebar__lastpost--thumbnail-widget">
 								<a class="sidebar__lastpost--link-img-post" href="<?php the_permalink(); ?>">
 								<?php $image_id = get_post_thumbnail_id(); ?>
-									<img src="<?php the_post_thumbnail_url(); ?>" alt="<?php echo esc_attr( get_post_meta( $image_id, '_wp_attachment_image_alt', true ) ) ?>" class="img-responsive">
+									<img src="<?php the_post_thumbnail_url(); ?>" alt="<?php echo esc_attr( get_post_meta( $image_id, '_wp_attachment_image_alt', true ) ) ?>" class="img-fluid">
 									<i class="fas fa-link"></i>
 								</a>
 								</div>
@@ -104,7 +104,7 @@
 				<a class="sidebar__widget--portfolio-link" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 					<h4 class="sidebar__widget--portfolio-link-title"><?php the_title(); ?></h4>
 					<?php $image_id = get_post_thumbnail_id(); ?>
-					<img src="<?php the_post_thumbnail_url(); ?>" data-src="<?php the_post_thumbnail_url(); ?>" class="portfolio-img-sb img-responsive img-rounded" alt="<?php echo esc_attr( get_post_meta( $image_id, '_wp_attachment_image_alt', true ) ) ?>" >
+					<img src="<?php the_post_thumbnail_url(); ?>" data-src="<?php the_post_thumbnail_url(); ?>" class="portfolio-img-sb img-fluid img-rounded" alt="<?php echo esc_attr( get_post_meta( $image_id, '_wp_attachment_image_alt', true ) ) ?>" >
 					<i class="fas fa-link"></i>
 				</a>
 			</div>

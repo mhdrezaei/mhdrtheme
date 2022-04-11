@@ -182,7 +182,7 @@ jQuery(document).ready(function ($) {
         var $post_id = $this.data('id');
         var $liked = $this.data('liked');
         if ($liked) {
-            Swal.fire("You have already liked this post");
+            Swal.fire("شما قبلا این مطلب را لایک کرده بودید!!!");
             return 0;
         } else {
             $.ajax({
@@ -196,7 +196,7 @@ jQuery(document).ready(function ($) {
                 success: function (response) {
                     $this.html(`<i class="fa fa-heart" aria-hidden="true"></i>` + response.count);
                     $this.data('liked', 1);
-                    Swal.fire("thank you!!!", "you liked this post!", "success");
+                    Swal.fire("با تشکر!!!", "شما این مطلب را پسندیدید!", "success");
 
                 },
                 error: function (response) {
@@ -269,7 +269,7 @@ jQuery(document).ready(function ($) {
             Swal.fire({
                 position: 'center',
                 icon: 'error',
-                title: 'confirm reCaptcha is Require !',
+                title: 'تایید امنیتی اجباری است!!!',
                 showConfirmButton: true
             });
             return false;
@@ -298,7 +298,7 @@ jQuery(document).ready(function ($) {
                     captcha: grecaptcha.getResponse(0),
                     nonce: $nonce
                 }, beforeSend: function (xhr) {
-                    button.addClass('loadingform').val('Loading...');
+                    button.addClass('loadingform').val('در حال بارگذاری...');
                 }, success: function (response) {
                     if (response.error) {
                         Swal.fire({

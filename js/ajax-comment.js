@@ -11,7 +11,7 @@ jQuery.extend(jQuery.fn, {
             Swal.fire({
                 position: 'center',
                 icon: 'error',
-                title: 'All fields marked with star(*) are required !',
+                title: 'تمامی فیلد های ستاره دار(*) اجباری است!!!',
                 showConfirmButton: true
             });
             return false
@@ -30,7 +30,7 @@ jQuery.extend(jQuery.fn, {
             Swal.fire({
                 position: 'center',
                 icon: 'error',
-                title: 'Please enter a valid email address !',
+                title: 'لطفا ایمیل معتبر وارد نمایید!!!',
                 showConfirmButton: true
             });
             return false
@@ -71,7 +71,7 @@ jQuery(function($){
             Swal.fire({
                 position: 'center',
                 icon: 'error',
-                title: 'confirm reCaptcha is Require !',
+                title: 'تایید امنیتی اجباری است !!!',
                 showConfirmButton: true
             });
             return false;
@@ -105,7 +105,7 @@ jQuery(function($){
                 data: $(this).serialize() + '&action=ajaxcomments', captcha : grecaptcha.getResponse(0), // send form data + action parameter
                 beforeSend: function(xhr){
                     // what to do just after the form has been submitted
-                    button.addClass('loadingform').val('Loading...');
+                    button.addClass('loadingform').val('در حال بارگذاری...');
                 },
                 error: function (request, status, error) {
                     if( status == 500 ){
@@ -183,7 +183,7 @@ jQuery(function($){
                         Swal.fire({
                             position: 'center',
                             icon: 'success',
-                            title: 'Your comment has been successfully submitted !',
+                            title: 'دیدگاه شما با موفقیت ارسال شد!!!',
                             showConfirmButton: true,
                         });
                     }
@@ -192,7 +192,7 @@ jQuery(function($){
                 },
                 complete: function(){
                     // what to do after a comment has been added
-                    button.removeClass( 'loadingform' ).val( 'Post Comment' );
+                    button.removeClass( 'loadingform' ).val( 'فرستادن دیدگاه' );
 
                 }
             });

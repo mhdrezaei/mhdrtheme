@@ -62,19 +62,19 @@ function mhd_contact_form() {
 	if ( empty( $full_name ) || empty( $email ) || empty( $message ) || empty( $response ) ) {
 		$result = array(
 			'error'   => true,
-			'message' => __( 'All fields marked with star(*) are required !!!', 'myway' )
+			'message' => __( 'تمامی فیلد های ستاره دار(*) اجباری می باشد!!!', 'myway' )
 		);
 		wp_send_json( $result );
 	} elseif ( ! filter_var( $email, FILTER_VALIDATE_EMAIL ) ) {
 		$result = array(
 			'error'   => true,
-			'message' => __( 'Please enter a valid email address !!!', 'myway' )
+			'message' => __( 'لطفا ایمیل معتبر وارد کنید!!!', 'myway' )
 		);
 		wp_send_json( $result );
 	} elseif ( $captcha_success->success == false ) {
 		$result = array(
 			'error'   => true,
-			'message' => __( 'reCaptcha is Expired please wait!!', 'myway' )
+			'message' => __( 'تایید امنیتی منقضی شده است لطفا منتظر بایشد!!!', 'myway' )
 		);
 		wp_send_json( $result );
 	} else {
@@ -95,14 +95,14 @@ function mhd_contact_form() {
 		if ( ! is_wp_error( $send ) ) {
 			$result = array(
 				'success' => true,
-				'message' => __( 'Your message has been successfully sent !', 'mhdrtheme' )
+				'message' => __( 'پیام شما با موفقیت ارسال شد', 'mhdrtheme' )
 
 			);
 			wp_send_json( $result );          
 		} else {
 			$result = array(
 				'error'   => true,
-				'message' => __( 'somthing is wrong!!', 'myway' )
+				'message' => __( 'مشکلی وجود دارد!!!', 'mhdrtheme' )
 			);
 			wp_send_json( $result );
 		}
@@ -128,7 +128,7 @@ function mhd_submit_ajax_comment() {
 	if ( $captcha_success->success == false ) {
 		$result = array(
 			'error'   => true,
-			'message' => __( 'reCaptcha is Expired please wait!!', 'myway' )
+			'message' => __( 'تایید امنیتی اجبار است!!!', 'mhdrtheme' )
 		);
 		wp_send_json( $result );
 	}
@@ -136,12 +136,12 @@ function mhd_submit_ajax_comment() {
 	if ( is_wp_error( $comment ) ) {
 		$error_data = intval( $comment->get_error_data() );
 		if ( ! empty( $error_data ) ) {
-			wp_die( '<p>' . $comment->get_error_message() . '</p>', __( 'Comment Submission Failure', 'myway' ), array(
+			wp_die( '<p>' . $comment->get_error_message() . '</p>', __( 'ارسال دیدگاه ناموفق بود!!!', 'mhdrtheme' ), array(
 				'response'  => $error_data,
 				'back_link' => true
 			) );
 		} else {
-			wp_die( 'Unknown error' );
+			wp_die( 'خطای ناشناخته' );
 		}
 	}
 
@@ -188,7 +188,7 @@ function mhd_submit_ajax_comment() {
 
 	$comment_html .= '</div>';
 	if ( $comment->comment_approved == '0' ) {
-		$comment_html .= '<div class="comment-awaiting-moderation">Your comment is awaiting moderation.</div>';
+		$comment_html .= '<div class="comment-awaiting-moderation">دیدگاه شما در انتظار تایید است!!!</div>';
 	}
 
 	$comment_html .= '
